@@ -1,0 +1,127 @@
+{
+  "id": "com.pioneer.avr",
+  "version": "1.0.0",
+  "compatibility": ">=1.5.0",
+  "sdk": 2,
+  "name": {
+    "en": "Pioneer AVR"
+  },
+  "description": {
+    "en": "Pioneer AV-Receiver application using SSDP and Telnet.",
+    "nl": "Pioneer AV-Receiver applicatie gebruik makend van SSDP en Telnet.",
+    "de": "Pioneer AV-Receiver-Anwendung mit SSDP und Telnet.",
+    "fr": "Application Pioneer AV-Receiver utilisant SSDP et Telnet"
+  },
+  "category": [
+    "music"
+  ],
+  "permissions": [],
+  "images": {
+    "large": "/assets/images/large.png",
+    "small": "/assets/images/small.png"
+  },
+  "author": {
+  	"name": "Rinze Winters",
+	"email": "contact@rinzewinters.nl",
+	"website": "http://www.rinzewinters.nl"
+  },
+  "discovery": {
+  	"pioneer": {
+    	"type": "ssdp",
+    	"ssdp": {
+    		"search": "urn:schemas-upnp-org:device:MediaRenderer:1"
+    	},
+    	"id": "{{headers.usn}}",
+      	"conditions": [
+        [
+          {
+            "field": "headers.usn",
+            "match": {
+              "type": "regex",
+              "value": "(-00E03\\w*6)|(-745E1\\w*c)|(-94B2C\\w*C)/i"
+            }
+          }
+        ]
+      ]
+    }
+  },
+  "drivers": [
+  	{
+  		"id": "vsx",
+  		"discovery": "pioneer",
+        "name": {
+        	"en": "VSX"
+      	},
+      	"class": "amplifier",
+      	"capabilities": [
+        	"volume_set",
+        	"onoff",
+        	"volume_down",
+        	"volume_mute",
+        	"volume_up"
+      	],
+      	"capabilitiesOptions": {
+      		"volume_set": {
+      			"min": -80,
+      			"max": -25,
+      			"step": 0.5
+      		}
+      	},
+        "images": {
+        	"large": "/drivers/vsx/assets/images/large.png",
+        	"small": "/drivers/vsx/assets/images/small.png"
+      	},
+      	"pair": [
+      		{
+      			"id": "list_devices",
+      			"template": "list_devices",
+      			"navigation": {
+      				"next": "add_devices"
+      			},
+      			"options": {
+            		"singular": false
+         	 	}
+      		},
+      		{
+      			"id": "add_devices",
+      			"template": "add_devices"
+      		}
+      	],
+      	"settings": [
+      		{
+      			"type": "group",
+      			"label": {
+      				"en": "General settings",
+      				"nl": "Algemene instellingen",
+      				"de": "Allgemeine Einstellungen",
+      				"fr": "Réglages généraux"
+
+      			},
+      			"children": [
+      				{
+      					"id": "maxVolume",
+      					"type": "number",
+      					"label": {
+      						"en": "Maximum volume in decibels",
+      						"nl": "Maximale volume in decibels",
+      						"de": "Maximales Volumen in Dezibel",
+      						"fr": "Volume maximum en décibels"
+      					},
+      					"value": -25,
+      					"min": -79,
+      					"max": 12,
+      					"units": "decibels",
+      					"hint": {
+      						"en": "This setting sets the volume limit used by the application",
+      						"nl": "Met deze instelling wordt de maximale volume ingesteld die door de applicatie wordt gebruikt",
+      						"de": "Diese Einstellung legt die von der Anwendung verwendete Lautstärkebegrenzung fest",
+      						"fr": "Ce paramètre définit la limite de volume utilisée par l'application"
+      					}
+
+      				}
+      			]
+      		}
+      	]
+  	}
+  ]
+}

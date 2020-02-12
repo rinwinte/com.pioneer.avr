@@ -1,0 +1,26 @@
+{
+  "name": "com.rinzewinters.pioneer",
+  "version": "1.0.0",
+  "description": "Pioneer AVR application",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "eslint-plugin-json": "^2.0.1",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-athom": "^2.0.6",
+    "eslint-config-google": "^0.14.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rinze Winters",
+  "license": "ISC",
+  "engines": {
+    "node": ">=8.0.0"
+  }
+}
