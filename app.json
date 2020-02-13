@@ -25,6 +25,13 @@
 	"email": "contact@rinzewinters.nl",
 	"website": "http://www.rinzewinters.nl"
   },
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "rinwinte"      
+      }
+    }
+  },
   "discovery": {
   	"pioneer": {
     	"type": "ssdp",
