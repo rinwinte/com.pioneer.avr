@@ -43,7 +43,7 @@ class PioneerVSXDriver extends Homey.Driver {
           return;
       }
 
-      let friendlyName = matchBetweenTags('friendlyName', body);
+      const friendlyName = matchBetweenTags('friendlyName', body);
       if (friendlyName) friendlyName = friendlyName.replace('Pioneer VSX');
       
       let udn = matchBetweenTags('UDN', body).replace('uuid:', '');
