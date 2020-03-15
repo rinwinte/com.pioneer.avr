@@ -1,4 +1,4 @@
 {
-	"networkstby": "The Pioneer VSX Network Standby setting should be ON, see app download page for details"
-
+	"networkstby": "The Pioneer VSX Network Standby setting should be ON, see app download page for details",
+    "invalidsrc": "The current input source is not supported."
 }

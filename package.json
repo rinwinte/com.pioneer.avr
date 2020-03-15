@@ -1,6 +1,6 @@
 {
   "name": "com.pioneer.avr",
-  "version": "0.1.8",
+  "version": "0.2.0",
   "description": "Pioneer AVR application",
   "main": "app.js",
   "directories": {
@@ -16,7 +16,8 @@
   "devDependencies": {
     "eslint": "^6.8.0",
     "eslint-config-athom": "^2.0.6",
-    "eslint-config-google": "^0.14.0"
+    "eslint-config-google": "^0.14.0",
+    "homey": "^2.2.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

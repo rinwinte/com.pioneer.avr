@@ -1,0 +1,181 @@
+{
+  "id": "input_source_changed",
+  "title": {
+    "en": "Input source has changed to",
+    "nl": "Ingangsbron is gewijzig naar",
+    "de": "Eingangsquelle hat sich geändert zu",
+    "fr": "La source d'entrée a changé en"
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=vsx"    
+    },
+    {
+      "name": "input_source",
+      "type": "dropdown",
+      "values": [
+        {
+          "id": "any",
+          "title": {
+            "en": "Any",
+            "nl": "Alle",
+            "de": "Jeder",
+            "fr": "Tout"
+          }
+        },
+        {
+          "id": "25",
+          "title": {
+            "en": "BD"
+          }
+        },
+        {
+          "id": "04",
+          "title": {
+            "en": "DVD"
+          }
+        },
+        {
+          "id": "15",
+          "title": {
+            "en": "DVR/BDR"
+          }
+        },
+        {
+          "id": "06",
+          "title": {
+            "en": "SAT/CBL"
+          }
+        },
+        {
+          "id": "49",
+          "title": {
+            "en": "GAME"
+          }
+        },
+        {
+          "id": "01",
+          "title": {
+            "en": "CD"
+          }
+        },
+        {
+          "id": "05",
+          "title": {
+            "en": "TV"
+          }
+        },
+        {
+          "id": "02",
+          "title": {
+            "en": "Tuner"
+          }
+        },
+        {
+          "id": "38",
+          "title": {
+            "en": "Internet Radio"
+          }
+        },
+        {
+          "id": "45",
+          "title": {
+            "en": "Favorites"
+          }
+        },
+        {
+          "id": "17",
+          "title": {
+            "en": "iPod/USB"
+          }
+        },
+        {
+          "id": "10",
+          "title": {
+            "en": "VIDEO 1"
+          }
+        },
+        {
+          "id": "14",
+          "title": {
+            "en": "VIDEO 2"
+          }
+        },
+        {
+          "id": "19",
+          "title": {
+            "en": "HDMI 1"
+          }
+        },
+        {
+          "id": "20",
+          "title": {
+            "en": "HDMI 2"
+          }
+        },
+        {
+          "id": "21",
+          "title": {
+            "en": "HDMI 3"
+          }
+        },
+        {
+          "id": "22",
+          "title": {
+            "en": "HDMI 4"
+          }
+        },
+        {
+          "id": "23",
+          "title": {
+            "en": "HDMI 5"
+          }
+        },
+        {
+          "id": "24",
+          "title": {
+            "en": "HDMI 6"
+          }
+        },
+        {
+          "id": "34",
+          "title": {
+            "en": "HDMI 7"
+          }
+        },
+        {
+          "id": "26",
+          "title": {
+            "en": "HMG"
+          }
+        },
+        {
+          "id": "48",
+          "title": {
+            "en": "MHL"
+          }
+        },
+        {
+          "id": "03",
+          "title": {
+            "en": "CD-R/TAPE"
+          }
+        },
+        {
+          "id": "00",
+          "title": {
+            "en": "PHONO"
+          }
+        },
+        {
+          "id": "33",
+          "title": {
+            "en": "ADAPTER PORT"
+          }
+        }
+      ]
+    }
+  ]
+}

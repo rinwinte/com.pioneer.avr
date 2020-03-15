@@ -1,4 +1,4 @@
 {
-	"networkstby": "Le paramètre Pioneer VSX Network Standby doit être activé, voir la page de téléchargement de l'application pour plus de détails"
-	
+	"networkstby": "Le paramètre Pioneer VSX Network Standby doit être activé, voir la page de téléchargement de l'application pour plus de détails.",
+    "invalidsrc": "La source d'entrée actuelle ne sera pas supporté."
 }

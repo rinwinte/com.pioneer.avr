@@ -1,0 +1,35 @@
+{
+  "id": "com.pioneer.avr",
+  "version": "0.2.0",
+  "compatibility": ">=1.5.0",
+  "sdk": 2,
+  "name": {
+    "en": "Pioneer AVR"
+  },
+  "description": {
+    "en": "Pioneer AV-Receiver application using SSDP and Telnet.",
+    "nl": "Pioneer AV-Receiver applicatie gebruik makend van SSDP en Telnet.",
+    "de": "Pioneer AV-Receiver-Anwendung mit SSDP und Telnet.",
+    "fr": "Application Pioneer AV-Receiver utilisant SSDP et Telnet"
+  },
+  "category": [
+    "music"
+  ],
+  "permissions": [],
+  "images": {
+    "large": "/assets/images/large.png",
+    "small": "/assets/images/small.png"
+  },
+  "author": {
+    "name": "Rinze Winters",
+    "email": "contact@rinzewinters.nl",
+    "website": "http://www.rinzewinters.nl"
+  },
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "rinwinte"
+      }
+    }
+  }
+}
