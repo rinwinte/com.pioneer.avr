@@ -1,6 +1,6 @@
 {
   "id": "com.pioneer.avr",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "compatibility": ">=1.5.0",
   "sdk": 2,
   "name": {
@@ -599,8 +599,11 @@
             "next": "add_devices"
           },
           "options": {
-            "singular": false
+            "singular": true
           }
+        },
+        {
+          "id": "start"
         },
         {
           "id": "add_devices",

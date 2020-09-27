@@ -27,15 +27,18 @@
     "small": "/drivers/vsx/assets/images/small.png"
   },
   "pair": [
-    {
+     {
       "id": "list_devices",
       "template": "list_devices",
       "navigation": {
         "next": "add_devices"
       },
       "options": {
-        "singular": false
+        "singular": true
       }
+    },
+    {
+      "id": "manual_pairing"
     },
     {
       "id": "add_devices",

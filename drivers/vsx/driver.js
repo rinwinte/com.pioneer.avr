@@ -20,7 +20,9 @@ class PioneerVSXDriver extends Homey.Driver {
 
     this.log('VSX Driver - onInit()');
 
-    this.devices = {};
+    this.devices = [];
+    
+    const cronInterval = setInterval(this.onInterval, 60000, this.getDevices());
 
     const discoveryStrategy = Homey.ManagerDiscovery.getDiscoveryStrategy('pioneer');
     discoveryStrategy.on('result', this.onDiscoveryResult.bind(this));
@@ -66,8 +68,11 @@ class PioneerVSXDriver extends Homey.Driver {
   }
 
   onDiscoveryResult(discoveryResult) {
+  	this.log('VSX Driver - onDiscoveryResult() - id', discoveryResult.id);
+    this.log('VSX Driver - onDiscoveryResult() - headers: ', discoveryResult.headers);
     fetch(discoveryResult.headers.location).then(async res => {
       if (!res.ok) {
+      	this.log('VSX Driver - onDiscoveryResult() - error: ', res.statusText);
         throw new Error(res.statusText);
       }
 
@@ -81,6 +86,7 @@ class PioneerVSXDriver extends Homey.Driver {
       if (manufacturer !== 'PIONEER CORPORATION') {
         // TODO: leads to an error during pairing.
         // Instead it should result in no new devices found
+        this.log('VSX Driver - onDiscoveryResult() - wrong manufacturer: ', manufacturer);
         return;
       }
 
@@ -100,31 +106,63 @@ class PioneerVSXDriver extends Homey.Driver {
           name: friendlyName,
           data: {
             id: udn,
-            address,
+            address: address,
             port: (port ? parseInt(port, 10) : 8102),
+            mannually: false,
           },
-          // modelName: matchBetweenTags('modelName', body),
-          // modelNumber: matchBetweenTags('modelNumber', body),
-          // deviceId: matchBetweenTags('DeviceID', body),
-          // wlanMac: matchBetweenTags('wlanMac', body),
         };
 
-        // this.emit(`device:${device.udn}`, device);
         this.log(`VSX Driver - Found device [${device.data.id}] ${device.name} @ ${device.data.address}:${device.data.port}`);
       }
-    }).catch(this.error);
-  }
-
-  // This method is called when a user is adding a device
-  // and the 'list_devices' view is called
-  async onPairListDevices(data, callback) {
-    this.log('VSX Driver - onPairListDevices()');
-    const devices = Object.values(this.devices).map(device => {
-      return device;
+    })
+    .catch(err => {
+        this.log('VSX Driver - onDiscoveryResult() - fetch error: ', this.error);
     });
-    return callback(null, devices);
   }
 
+  onPair( socket ) {
+    this.log('VSX - Driver - onPair');
+    const pioneerDevices = this.devices;
+
+    // Received when a view has changed
+    socket.on('showView', ( viewId, callback ) => {
+      callback();
+      console.log('View: ' + viewId);
+
+	  if(Object.keys(this.devices).length == 0 && viewId == 'list_devices')
+      {
+      	console.log('view changed to manual_pairing');
+      	socket.showView('manual_pairing');
+      }
+    });
+
+
+    socket.on('list_devices', function( data, callback ) {
+
+      const devices = Object.values(pioneerDevices).map(device => {
+        return device;
+      });
+
+      console.log(data);
+
+      if (Object.keys(data).length == 0)
+      {
+        console.log("ssdp devices")
+        callback( null, devices );
+      }
+      else
+      {
+        callback(null, [data]);
+      }
+    });
+  }
+
+  onInterval(devices) {
+    devices.forEach(device => {
+      device.onCheckAvailabilty();
+    });
+
+  }
 }
 
 module.exports = PioneerVSXDriver;
