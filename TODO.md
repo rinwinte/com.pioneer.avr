@@ -49,8 +49,16 @@ HOW TO DEPLOY NEW FIRMWARE:
 4. run command: sudo npm install -g homey
 5. run command: homey app validate --level publish
 6. run command: homey app publish
-7. run command: git push origin master
-8. run command: git commit -m "commit text"
+	-> Choose Yes for updating version number
+	-> Choose witch version number to increase, must be the same as in package.json
+	-> Enter a changelog test
+	-> Choose Yes
+7. run command to add all files to the repository: git add --all
+8. run command to view which files are added: git status
+9. run command: git commit -m "commit text" 
+10. run command: git push https://github.com/rinwinte/com.pioneer.avr.git
+	-> Add username: rinwinte
+	-> Add password: see Iphone
 
 
 
