@@ -3,8 +3,8 @@ TODO next release
 
 - Comply with newest homey SDK
 - Delete unrequired files from Github
-- Update git files following warning from github
-
+- Update git files following warning from github (dependabot)
+- Update to sdk 3
 
 
 
