@@ -34,5 +34,8 @@
   },
   "0.4.0": {
     "en": "Fix for detecting power-on when manually powering the device"
+  },
+  "0.4.1": {
+    "en": "Patch for unresponsive device"
   }
 }
