@@ -1,0 +1,29 @@
+{
+  "name": "com.pioneer.avr",
+  "version": "1.0.0",
+  "description": "Pioneer AVR application",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "@babel/core": "^7.14.2",
+    "homey-log": "^2.0.1",
+    "node-fetch": "^2.6.1",
+    "xml2js": "^0.4.23"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.14.2",
+    "@babel/eslint-plugin": "^7.13.16",
+    "eslint": "^7.26.0",
+    "eslint-config-athom": "^2.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rinze Winters",
+  "license": "MIT",
+  "engines": {
+    "node": ">=12.16.1"
+  }
+}

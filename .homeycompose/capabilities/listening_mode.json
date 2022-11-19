@@ -1,0 +1,153 @@
+{
+  "type": "enum",
+  "title": {
+    "en": "Listening mode",
+    "nl": "Luister modus",
+    "de": "Hörmodus",
+    "fr": "Mode d'écoute"
+  },
+  "desc": {
+    "en": "Listening mode of the Pioneer",
+    "nl": "Luister modus van de Pioneer",
+    "de": "Hörmodus des Pioneer",
+    "fr": "Mode d'écoute du Pioneer"
+  },
+  "values": [
+    {
+      "id": "0001",
+      "title": {
+        "en": "Stereo(Auto)"
+      }
+    },
+    {
+      "id": "0006",
+      "title": {
+        "en": "Auto Surround"
+      }
+    },
+    {
+      "id": "0009",
+      "title": {
+        "en": "Stereo(Direct)"
+      }
+    },
+    {
+      "id": "0010",
+      "title": {
+        "en": "Standard"
+      }
+    },
+    {
+      "id": "0106",
+      "title": {
+        "en": "Expanded Theater(Movie)"
+      }
+    },
+    {
+      "id": "0112",
+      "title": {
+        "en": "Extended Stereo(Music)"
+      }
+    },
+    {
+      "id": "0118",
+      "title": {
+        "en": "Advanced Game(Game)"
+      }
+    },
+    {
+      "id": "0151",
+      "title": {
+        "en": "Auto Level Control(A.L.C.)"
+      }
+    },
+    {
+      "id": "0007",
+      "title": {
+        "en": "Direct"
+      }
+    },
+    {
+      "id": "0008",
+      "title": {
+        "en": "Pure Direct"
+      }
+    },
+    {
+      "id": "0152",
+      "title": {
+        "en": "Optimum Surround"
+      }
+    },
+    {
+      "id": "0101",
+      "title": {
+        "en": "Action"
+      }
+    },
+    {
+      "id": "0102",
+      "title": {
+        "en": "Sci-Fi"
+      }
+    },
+    {
+      "id": "0103",
+      "title": {
+        "en": "Drama"
+      }
+    },
+    {
+      "id": "0104",
+      "title": {
+        "en": "Entertainment show"
+      }
+    },
+    {
+      "id": "0105",
+      "title": {
+        "en": "Mono Film"
+      }
+    },
+    {
+      "id": "0107",
+      "title": {
+        "en": "Classical"
+      }
+    },
+    {
+      "id": "0109",
+      "title": {
+        "en": "Unplugged"
+      }
+    },
+    {
+      "id": "0110",
+      "title": {
+        "en": "Rock/Pop"
+      }
+    },
+    {
+      "id": "0116",
+      "title": {
+        "en": "TV Surround"
+      }
+    },
+    {
+      "id": "0117",
+      "title": {
+        "en": "Sports"
+      }
+    },
+    {
+      "id": "0000",
+      "title": {
+        "en": "Unknown"
+      }
+    }
+  ],
+  "getable": true,
+  "setable": true,
+  "uiComponent": "picker",
+  "insights": false
+}

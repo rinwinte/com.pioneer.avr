@@ -1,0 +1,2162 @@
+{
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
+  "id": "com.pioneer.avr",
+  "version": "1.0.1",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "brandColor": "#A90533",
+  "name": {
+    "en": "Pioneer AVR"
+  },
+  "description": {
+    "en": "Experience sounds even better",
+    "nl": "Ervaar geluid nog beter.",
+    "de": "Erleben Sie Klänge noch besser.",
+    "fr": "L'expérience sonne encore mieux."
+  },
+  "category": [
+    "music",
+    "appliances"
+  ],
+  "tags": {
+    "en": [
+      "receiver",
+      "amplifier",
+      "audio",
+      "music"
+    ]
+  },
+  "permissions": [
+    "homey:wireless:ir"
+  ],
+  "images": {
+    "large": "/assets/images/pioneerLivingRoom.jpeg",
+    "small": "/assets/images/small.png"
+  },
+  "author": {
+    "name": "Rinze Winters",
+    "email": "contact@rinzewinters.nl",
+    "website": "http://www.rinzewinters.nl"
+  },
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "rinwinte"
+      }
+    }
+  },
+  "bugs": {
+    "url": "https://github.com/rinwinte/com.pioneer.avr/issues"
+  },
+  "source": "https://github.com/rinwinte/com.pioneer.avr",
+  "homepage": "https://github.com/rinwinte/com.pioneer.avr",
+  "support": "mailto:contact@rinzewinters.nl",
+  "flow": {
+    "triggers": [
+      {
+        "id": "input_source_changed",
+        "title": {
+          "en": "Input source has changed",
+          "nl": "Ingangsbron is gewijzig",
+          "de": "Eingangsquelle hat sich geändert",
+          "fr": "La source d'entrée a changé"
+        },
+        "titleFormatted": {
+          "en": "[[zone]] input source has changed to [[input_source]]",
+          "nl": "[[zone]] ingangsbron is gewijzigd naar [[input_source]]",
+          "de": "Eingangsquelle du [[zone]] hat sich geändert zu [[input_source]]",
+          "fr": "La source d'entrée de la [[zone]] a changé en [[input_source]]"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=receiver"
+          },
+          {
+            "name": "zone",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "main",
+                "title": {
+                  "en": "main",
+                  "nl": "hoofdzone",
+                  "de": "Hauptzone",
+                  "fr": "zone principale"
+                }
+              },
+              {
+                "id": "zone2",
+                "title": {
+                  "en": "zone 2",
+                  "nl": "zone 2",
+                  "de": "zone 2",
+                  "fr": "zone 2"
+                }
+              }
+            ]
+          },
+          {
+            "name": "input_source",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "any",
+                "title": {
+                  "en": "Any",
+                  "nl": "Alle",
+                  "de": "Jeder",
+                  "fr": "Tout"
+                }
+              },
+              {
+                "id": "25",
+                "title": {
+                  "en": "BD"
+                }
+              },
+              {
+                "id": "04",
+                "title": {
+                  "en": "DVD"
+                }
+              },
+              {
+                "id": "15",
+                "title": {
+                  "en": "DVR/BDR"
+                }
+              },
+              {
+                "id": "06",
+                "title": {
+                  "en": "SAT/CBL"
+                }
+              },
+              {
+                "id": "49",
+                "title": {
+                  "en": "GAME"
+                }
+              },
+              {
+                "id": "01",
+                "title": {
+                  "en": "CD"
+                }
+              },
+              {
+                "id": "05",
+                "title": {
+                  "en": "TV"
+                }
+              },
+              {
+                "id": "02",
+                "title": {
+                  "en": "Tuner"
+                }
+              },
+              {
+                "id": "38",
+                "title": {
+                  "en": "Internet Radio"
+                }
+              },
+              {
+                "id": "45",
+                "title": {
+                  "en": "Favorites"
+                }
+              },
+              {
+                "id": "17",
+                "title": {
+                  "en": "iPod/USB"
+                }
+              },
+              {
+                "id": "10",
+                "title": {
+                  "en": "VIDEO 1"
+                }
+              },
+              {
+                "id": "14",
+                "title": {
+                  "en": "VIDEO 2"
+                }
+              },
+              {
+                "id": "19",
+                "title": {
+                  "en": "HDMI 1"
+                }
+              },
+              {
+                "id": "20",
+                "title": {
+                  "en": "HDMI 2"
+                }
+              },
+              {
+                "id": "21",
+                "title": {
+                  "en": "HDMI 3"
+                }
+              },
+              {
+                "id": "22",
+                "title": {
+                  "en": "HDMI 4"
+                }
+              },
+              {
+                "id": "23",
+                "title": {
+                  "en": "HDMI 5"
+                }
+              },
+              {
+                "id": "24",
+                "title": {
+                  "en": "HDMI 6"
+                }
+              },
+              {
+                "id": "34",
+                "title": {
+                  "en": "HDMI 7"
+                }
+              },
+              {
+                "id": "26",
+                "title": {
+                  "en": "HMG"
+                }
+              },
+              {
+                "id": "48",
+                "title": {
+                  "en": "MHL"
+                }
+              },
+              {
+                "id": "03",
+                "title": {
+                  "en": "CD-R/TAPE"
+                }
+              },
+              {
+                "id": "00",
+                "title": {
+                  "en": "PHONO"
+                }
+              },
+              {
+                "id": "33",
+                "title": {
+                  "en": "ADAPTER PORT"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "onoff_false",
+        "highlight": true,
+        "title": {
+          "en": "Turned off",
+          "nl": "Uitgezet",
+          "de": "Ausgeschaltet",
+          "fr": "Désactivé",
+          "it": "Disattivato",
+          "sv": "Inaktiverad",
+          "no": "Slått av",
+          "es": "Apagado",
+          "da": "Slukket"
+        },
+        "titleFormatted": {
+          "en": "[[zone]] turned off",
+          "nl": "[[zone]] uitgezet",
+          "de": "[[zone]] ausgeschaltet",
+          "fr": "[[zone]] désactivé",
+          "it": "[[zone]] disattivato",
+          "sv": "[[zone]] inaktiverad",
+          "no": "[[zone]] slått av",
+          "es": "[[zone]] apagado",
+          "da": "[[zone]] slukket"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=receiver"
+          },
+          {
+            "name": "zone",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "main",
+                "title": {
+                  "en": "main",
+                  "nl": "hoofdzone",
+                  "de": "Hauptzone",
+                  "fr": "zone principale"
+                }
+              },
+              {
+                "id": "zone2",
+                "title": {
+                  "en": "zone 2",
+                  "nl": "zone 2",
+                  "de": "zone 2",
+                  "fr": "zone 2"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "onoff_true",
+        "highlight": true,
+        "title": {
+          "en": "Turned on",
+          "nl": "Aangezet ",
+          "de": "Angeschaltet",
+          "fr": "Activé",
+          "it": "Attivato",
+          "sv": "Aktiverad",
+          "no": "Slått på",
+          "es": "Encendido",
+          "da": "Tændt"
+        },
+        "titleFormatted": {
+          "en": "[[zone]] turned on",
+          "nl": "[[zone]] aangezet ",
+          "de": "[[zone]] angeschaltet",
+          "fr": "[[zone]] activé",
+          "it": "[[zone]] attivato",
+          "sv": "[[zone]] aktiverad",
+          "no": "[[zone]] slått på",
+          "es": "[[zone]] encendido",
+          "da": "[[zone]] tændt"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=receiver"
+          },
+          {
+            "name": "zone",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "main",
+                "title": {
+                  "en": "main",
+                  "nl": "hoofdzone",
+                  "de": "Hauptzone",
+                  "fr": "zone principale"
+                }
+              },
+              {
+                "id": "zone2",
+                "title": {
+                  "en": "zone 2",
+                  "nl": "zone 2",
+                  "de": "zone 2",
+                  "fr": "zone 2"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "conditions": [
+      {
+        "id": "input_source_is",
+        "title": {
+          "en": "Input source !{{is|isn't}}",
+          "nl": "Ingangsbron !{{is|is niet}}",
+          "de": "Eingangsquelle !{{ist|ist nicht}}",
+          "fr": "La source d'entrée !{{est|n'est pas}}"
+        },
+        "titleFormatted": {
+          "en": "[[zone]] input source !{{is|isn't}} [[input_source]]",
+          "nl": "[[zone]] ingangsbron !{{is|is niet}} [[input_source]]",
+          "de": "Eingangsquelle de [[zone]] !{{ist|ist nicht}} [[input_source]]",
+          "fr": "La source d'entrée de la [[zone]] !{{est|n'est pas}} [[input_source]]"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=receiver"
+          },
+          {
+            "name": "zone",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "main",
+                "title": {
+                  "en": "main",
+                  "nl": "hoofdzone",
+                  "de": "Hauptzone",
+                  "fr": "zone principale"
+                }
+              },
+              {
+                "id": "zone2",
+                "title": {
+                  "en": "zone 2",
+                  "nl": "zone 2",
+                  "de": "zone 2",
+                  "fr": "zone 2"
+                }
+              }
+            ]
+          },
+          {
+            "name": "input_source",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "25",
+                "title": {
+                  "en": "BD"
+                }
+              },
+              {
+                "id": "04",
+                "title": {
+                  "en": "DVD"
+                }
+              },
+              {
+                "id": "15",
+                "title": {
+                  "en": "DVR/BDR"
+                }
+              },
+              {
+                "id": "06",
+                "title": {
+                  "en": "SAT/CBL"
+                }
+              },
+              {
+                "id": "49",
+                "title": {
+                  "en": "GAME"
+                }
+              },
+              {
+                "id": "01",
+                "title": {
+                  "en": "CD"
+                }
+              },
+              {
+                "id": "05",
+                "title": {
+                  "en": "TV"
+                }
+              },
+              {
+                "id": "02",
+                "title": {
+                  "en": "Tuner"
+                }
+              },
+              {
+                "id": "38",
+                "title": {
+                  "en": "Internet Radio"
+                }
+              },
+              {
+                "id": "45",
+                "title": {
+                  "en": "Favorites"
+                }
+              },
+              {
+                "id": "17",
+                "title": {
+                  "en": "iPod/USB"
+                }
+              },
+              {
+                "id": "10",
+                "title": {
+                  "en": "VIDEO 1"
+                }
+              },
+              {
+                "id": "14",
+                "title": {
+                  "en": "VIDEO 2"
+                }
+              },
+              {
+                "id": "19",
+                "title": {
+                  "en": "HDMI 1"
+                }
+              },
+              {
+                "id": "20",
+                "title": {
+                  "en": "HDMI 2"
+                }
+              },
+              {
+                "id": "21",
+                "title": {
+                  "en": "HDMI 3"
+                }
+              },
+              {
+                "id": "22",
+                "title": {
+                  "en": "HDMI 4"
+                }
+              },
+              {
+                "id": "23",
+                "title": {
+                  "en": "HDMI 5"
+                }
+              },
+              {
+                "id": "24",
+                "title": {
+                  "en": "HDMI 6"
+                }
+              },
+              {
+                "id": "34",
+                "title": {
+                  "en": "HDMI 7"
+                }
+              },
+              {
+                "id": "26",
+                "title": {
+                  "en": "HMG"
+                }
+              },
+              {
+                "id": "48",
+                "title": {
+                  "en": "MHL"
+                }
+              },
+              {
+                "id": "03",
+                "title": {
+                  "en": "CD-R/TAPE"
+                }
+              },
+              {
+                "id": "00",
+                "title": {
+                  "en": "PHONO"
+                }
+              },
+              {
+                "id": "33",
+                "title": {
+                  "en": "ADAPTER PORT"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "on",
+        "title": {
+          "en": "Is turned !{{on|off}}",
+          "nl": "Is !{{aan|uit}}",
+          "de": "Ist !{{an|aus}}",
+          "fr": "Est !{{activé|désactivé}}",
+          "it": "È !{{attivato|disattivato}}",
+          "sv": "Är !{{på|av}}",
+          "no": "Er slått !{{på|av}}",
+          "es": "Está !{{encendido|apagado}}",
+          "da": "Er !{{tændt|slukket}}"
+        },
+        "titleFormatted": {
+          "en": "[[zone]] is turned !{{on|off}}",
+          "nl": "[[zone]] is !{{aan|uit}}",
+          "de": "[[zone]] ist !{{an|aus}}",
+          "fr": "[[zone]] est !{{activé|désactivé}}",
+          "it": "[[zone]] È !{{attivato|disattivato}}",
+          "sv": "[[zone]] Är !{{på|av}}",
+          "no": "[[zone]] er slått !{{på|av}}",
+          "es": "[[zone]] está !{{encendido|apagado}}",
+          "da": "[[zone]] er !{{tændt|slukket}}"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=receiver"
+          },
+          {
+            "name": "zone",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "main",
+                "title": {
+                  "en": "main",
+                  "nl": "hoofdzone",
+                  "de": "Hauptzone",
+                  "fr": "zone principale"
+                }
+              },
+              {
+                "id": "zone2",
+                "title": {
+                  "en": "zone 2",
+                  "nl": "zone 2",
+                  "de": "zone 2",
+                  "fr": "zone 2"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "id": "custom_command",
+        "title": {
+          "en": "Send a custom command",
+          "nl": "Stuur een aangepast commando",
+          "de": "Benutzerdefinierten Befehl senden",
+          "fr": "Envoyer une commande personnalisée"
+        },
+        "titleFormatted": {
+          "en": "Send custom command: [[command]]",
+          "nl": "Stuur een aangepast commando: [[command]]",
+          "de": "Benutzerdefinierten Befehl senden: [[command]]",
+          "fr": "Envoyer une commande personnalisée: [[command]]"
+        },
+        "hint": {
+          "en": "Custom commands allow you to specify custom data to send to your Pioneer device. Supported commands can be found in the manual https://github.com/rinwinte/com.pioneer.avr/manual.",
+          "nl": "Speciale commando's geven de mogelijkheid om specifieke data te versturen naar uw Pioneer versterker. Ondersteunde commando's vind je in de handleiding https://github.com/rinwinte/com.pioneer.avr/manual.",
+          "de": "Mit benutzerdefinierten Befehlen können Sie benutzerdefinierte Daten angeben, die an Ihr Pioneer-Gerät gesendet werden sollen. Unterstützte Befehle finden Sie im Handbuch https://github.com/rinwinte/com.pioneer.avr/manual.",
+          "fr": "Les commandes personnalisées vous permettent de spécifier des données personnalisées à envoyer à votre appareil Pioneer. Les commandes prises en charge peuvent être trouvées dans le manuel https://github.com/rinwinte/com.pioneer.avr/manual. "
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=receiver"
+          },
+          {
+            "name": "command",
+            "type": "text",
+            "placeholder": {
+              "en": "e.g. PO or 0009SR"
+            },
+            "title": {
+              "en": "Command",
+              "nl": "Commando",
+              "de": "Kommando",
+              "fr": "Commando"
+            }
+          }
+        ]
+      },
+      {
+        "id": "hmg_browsing",
+        "title": {
+          "en": "Browse to an item",
+          "nl": "Navigeer naar een item",
+          "de": "Navigieren Sie zum einem Artikel",
+          "fr": "Accédez à un élément"
+        },
+        "titleFormatted": {
+          "en": "Browse to item with path: [[item]]",
+          "nl": "Navigeer naar een item op locatie: [[item]]",
+          "de": "Navigieren Sie zu Artikel mit Standort: [[item]]",
+          "fr": "Accédez à l'élément avec l'emplacement: [[item]]"
+        },
+        "hint": {
+          "en": "Only H.M.G. items (folders/music/internet radio) are supported. Fill in the path beginning from the Top Menu. e.g. 1,1,5 to select Internet Radio/Locaties/Europa",
+          "nl": "Alleen H.M.G. items (folders/muziek/internet radio) worden ondersteund. Vul het pad in vanaf het hoogste menu. bijv. 1,1,5 to select Internet Radio/Locaties/Europa",
+          "de": "Es werden nur H.M.G.-Elemente (Ordner / Musik / Internetradio) unterstützt. Füllen Sie den Pfad ab dem oberen Menü aus. z.B. 1,1,5 to select Internet Radio/Locaties/Europa",
+          "fr": "Seuls les éléments H.M.G. (dossiers / musique / radio Internet) sont pris en charge. Remplissez le chemin en commencant par le menu du haut. Par exemple 1,1,5 to select Internet Radio/Locaties/Europa"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=receiver"
+          },
+          {
+            "name": "item",
+            "type": "text",
+            "placeholder": {
+              "en": "e.g. 1,1,5,33,2,3"
+            },
+            "title": {
+              "en": "Path to source",
+              "nl": "Pad naar bron",
+              "de": "Pfad zur Quelle",
+              "fr": "Chemin vers la source"
+            }
+          }
+        ]
+      },
+      {
+        "id": "input_source_set",
+        "title": {
+          "en": "Switch the input source",
+          "nl": "Wijzig de ingangsbron",
+          "de": "Eingangsquelle wechseln",
+          "fr": "Changer la source d'entrée"
+        },
+        "titleFormatted": {
+          "en": "Switch the [[zone]] input to [[input_source]]",
+          "nl": "Wijzig [[zone]] ingangsbron naar [[input_source]]",
+          "de": "[[zone]] eingangsquelle wechseln zum [[input_source]]",
+          "fr": "Changer l'entrée de [[zone]] sur [[input_source]]"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=receiver"
+          },
+          {
+            "name": "zone",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "main",
+                "title": {
+                  "en": "main",
+                  "nl": "hoofdzone",
+                  "de": "Hauptzone",
+                  "fr": "zone principale"
+                }
+              },
+              {
+                "id": "zone2",
+                "title": {
+                  "en": "zone 2",
+                  "nl": "zone 2",
+                  "de": "zone 2",
+                  "fr": "zone 2"
+                }
+              }
+            ]
+          },
+          {
+            "name": "input_source",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "25",
+                "title": {
+                  "en": "BD"
+                }
+              },
+              {
+                "id": "04",
+                "title": {
+                  "en": "DVD"
+                }
+              },
+              {
+                "id": "15",
+                "title": {
+                  "en": "DVR/BDR"
+                }
+              },
+              {
+                "id": "06",
+                "title": {
+                  "en": "SAT/CBL"
+                }
+              },
+              {
+                "id": "49",
+                "title": {
+                  "en": "GAME"
+                }
+              },
+              {
+                "id": "01",
+                "title": {
+                  "en": "CD"
+                }
+              },
+              {
+                "id": "05",
+                "title": {
+                  "en": "TV"
+                }
+              },
+              {
+                "id": "02",
+                "title": {
+                  "en": "Tuner"
+                }
+              },
+              {
+                "id": "38",
+                "title": {
+                  "en": "Internet Radio"
+                }
+              },
+              {
+                "id": "45",
+                "title": {
+                  "en": "Favorites"
+                }
+              },
+              {
+                "id": "17",
+                "title": {
+                  "en": "iPod/USB"
+                }
+              },
+              {
+                "id": "10",
+                "title": {
+                  "en": "VIDEO 1"
+                }
+              },
+              {
+                "id": "14",
+                "title": {
+                  "en": "VIDEO 2"
+                }
+              },
+              {
+                "id": "19",
+                "title": {
+                  "en": "HDMI 1"
+                }
+              },
+              {
+                "id": "20",
+                "title": {
+                  "en": "HDMI 2"
+                }
+              },
+              {
+                "id": "21",
+                "title": {
+                  "en": "HDMI 3"
+                }
+              },
+              {
+                "id": "22",
+                "title": {
+                  "en": "HDMI 4"
+                }
+              },
+              {
+                "id": "23",
+                "title": {
+                  "en": "HDMI 5"
+                }
+              },
+              {
+                "id": "24",
+                "title": {
+                  "en": "HDMI 6"
+                }
+              },
+              {
+                "id": "34",
+                "title": {
+                  "en": "HDMI 7"
+                }
+              },
+              {
+                "id": "26",
+                "title": {
+                  "en": "HMG"
+                }
+              },
+              {
+                "id": "48",
+                "title": {
+                  "en": "MHL"
+                }
+              },
+              {
+                "id": "03",
+                "title": {
+                  "en": "CD-R/TAPE"
+                }
+              },
+              {
+                "id": "00",
+                "title": {
+                  "en": "PHONO"
+                }
+              },
+              {
+                "id": "33",
+                "title": {
+                  "en": "ADAPTER PORT"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "listening_mode_set",
+        "title": {
+          "en": "Change the listening mode",
+          "nl": "Wijzig de luister modus",
+          "de": "Ändern Sie den Hörmodus",
+          "fr": "Changer le mode d'écoute"
+        },
+        "titleFormatted": {
+          "en": "Change the listening mode to [[input_source]]",
+          "nl": "Wijzig de luister modus naar [[input_source]]",
+          "de": "Ändern Sie den Hörmodus zum [[input_source]]",
+          "fr": "Changer le mode d'écoute sur [[input_source]]"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=vsx"
+          },
+          {
+            "name": "input_source",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "0001",
+                "title": {
+                  "en": "Stereo(Auto)"
+                }
+              },
+              {
+                "id": "0010",
+                "title": {
+                  "en": "Standard"
+                }
+              },
+              {
+                "id": "0106",
+                "title": {
+                  "en": "Expanded Theater(Movie)"
+                }
+              },
+              {
+                "id": "0112",
+                "title": {
+                  "en": "Extended Stereo(Music)"
+                }
+              },
+              {
+                "id": "0118",
+                "title": {
+                  "en": "Advanced Game(Game)"
+                }
+              },
+              {
+                "id": "0151",
+                "title": {
+                  "en": "Auto Level Control(A.L.C.)"
+                }
+              },
+              {
+                "id": "0007",
+                "title": {
+                  "en": "Direct"
+                }
+              },
+              {
+                "id": "0008",
+                "title": {
+                  "en": "Pure Direct"
+                }
+              },
+              {
+                "id": "0152",
+                "title": {
+                  "en": "Optimum Surround"
+                }
+              },
+              {
+                "id": "0101",
+                "title": {
+                  "en": "Action"
+                }
+              },
+              {
+                "id": "0102",
+                "title": {
+                  "en": "Sci-Fi"
+                }
+              },
+              {
+                "id": "0103",
+                "title": {
+                  "en": "Drama"
+                }
+              },
+              {
+                "id": "0104",
+                "title": {
+                  "en": "Entertainment show"
+                }
+              },
+              {
+                "id": "0105",
+                "title": {
+                  "en": "Mono Film"
+                }
+              },
+              {
+                "id": "0107",
+                "title": {
+                  "en": "Classical"
+                }
+              },
+              {
+                "id": "0109",
+                "title": {
+                  "en": "Unplugged"
+                }
+              },
+              {
+                "id": "0110",
+                "title": {
+                  "en": "Rock/Pop"
+                }
+              },
+              {
+                "id": "0116",
+                "title": {
+                  "en": "TV Surround"
+                }
+              },
+              {
+                "id": "0117",
+                "title": {
+                  "en": "Sports"
+                }
+              },
+              {
+                "id": "0000",
+                "title": {
+                  "en": "Unknown"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "off",
+        "highlight": true,
+        "title": {
+          "en": "Turn off",
+          "nl": "Zet uit",
+          "de": "Ausschalten",
+          "fr": "Désactiver",
+          "it": "Disattiva",
+          "sv": "stäng av",
+          "no": "Slå av",
+          "es": "Apagar",
+          "da": "Slukket"
+        },
+        "titleFormatted": {
+          "en": "Turn [[zone]] off",
+          "nl": "Zet [[zone]] uit",
+          "de": "[[zone]] Ausschalten",
+          "fr": "Désactiver [[zone]]",
+          "it": "Disattiva [[zone]]",
+          "sv": "Stäng [[zone]] av",
+          "no": "Slå [[zone]] av",
+          "es": "Apagar [[zone]]",
+          "da": "Slukket [[zone]]"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=receiver"
+          },
+          {
+            "name": "zone",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "main",
+                "title": {
+                  "en": "main",
+                  "nl": "hoofdzone",
+                  "de": "Hauptzone",
+                  "fr": "zone principale"
+                }
+              },
+              {
+                "id": "zone2",
+                "title": {
+                  "en": "zone 2",
+                  "nl": "zone 2",
+                  "de": "zone 2",
+                  "fr": "zone 2"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "on",
+        "highlight": true,
+        "title": {
+          "en": "Turn on",
+          "nl": "Zet aan",
+          "de": "Einschalten",
+          "fr": "Activer",
+          "it": "Attiva",
+          "sv": "Aktivera",
+          "no": "Slå på",
+          "es": "Encender",
+          "da": "Tændt"
+        },
+        "titleFormatted": {
+          "en": "Turn [[zone]] on ",
+          "nl": "Zet [[zone]] aan",
+          "de": "[[zone]] Einschalten",
+          "fr": "Activer [[zone]]",
+          "it": "Attiva [[zone]]",
+          "sv": "Aktivera [[zone]]",
+          "no": "Slå [[zone]] på",
+          "es": "Encender [[zone]]",
+          "da": "Tændt [[zone]]"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=receiver"
+          },
+          {
+            "name": "zone",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "main",
+                "title": {
+                  "en": "main",
+                  "nl": "hoofdzone",
+                  "de": "Hauptzone",
+                  "fr": "zone principale"
+                }
+              },
+              {
+                "id": "zone2",
+                "title": {
+                  "en": "zone 2",
+                  "nl": "zone 2",
+                  "de": "zone 2",
+                  "fr": "zone 2"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "toggle",
+        "title": {
+          "en": "Toggle on or off",
+          "nl": "Schakel aan of uit",
+          "de": "Ein- oder ausschalten",
+          "fr": "Alterner activé ou désactivé",
+          "it": "Attiva o disattiva",
+          "sv": "Växla på och av",
+          "no": "Veksle mellom på og av",
+          "es": "Encender o apagar",
+          "da": "Tænd eller sluk"
+        },
+        "titleFormatted": {
+          "en": "Toggle [[zone]] on or off",
+          "nl": "Schakel [[zone]] aan of uit",
+          "de": "[[zone]] ein- oder ausschalten",
+          "fr": "Alterner [[zone]] activé ou désactivé",
+          "it": "[[zone]] attiva o disattiva",
+          "sv": "Växla [[zone]] på och av",
+          "no": "Veksle mellom [[zone]] på og av",
+          "es": "[[zone]] encender o apagar",
+          "da": "[[zone]] tænd eller sluk"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=receiver"
+          },
+          {
+            "name": "zone",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "main",
+                "title": {
+                  "en": "main",
+                  "nl": "hoofdzone",
+                  "de": "Hauptzone",
+                  "fr": "zone principale"
+                }
+              },
+              {
+                "id": "zone2",
+                "title": {
+                  "en": "zone 2",
+                  "nl": "zone 2",
+                  "de": "zone 2",
+                  "fr": "zone 2"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "set_screen_brightness",
+        "title": {
+          "en": "Set screen brightness",
+          "nl": "Wijzig scherm helderheid",
+          "de": "Stellen Sie die Bildschirmhelligkeit ein",
+          "fr": "Régler la luminosité de l'écran"
+        },
+        "titleFormatted": {
+          "en": "Set screen brightness to [[brightness]]",
+          "nl": "Wijzig scherm helderheid naar [[brightness]]",
+          "de": "Stellen Sie die Bildschirmhelligkeit ein auf [[brightness]]",
+          "fr": "Régler la luminosité de l'écran sur [[brightness]]"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=receiver"
+          },
+          {
+            "name": "brightness",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "0",
+                "title": {
+                  "en": "really bright",
+                  "nl": "zeer helder",
+                  "de": "wirklich hell",
+                  "fr": "très lumineux"
+                }
+              },
+              {
+                "id": "1",
+                "title": {
+                  "en": "bright",
+                  "nl": "helder",
+                  "de": "hell",
+                  "fr": "lumineux"
+                }
+              },
+              {
+                "id": "2",
+                "title": {
+                  "en": "dark",
+                  "nl": "donker",
+                  "de": "dunkel",
+                  "fr": "foncé"
+                }
+              },
+              {
+                "id": "3",
+                "title": {
+                  "en": "off",
+                  "nl": "uit",
+                  "de": "aus",
+                  "fr": "inactive"
+                }
+              },
+              {
+                "id": "9",
+                "title": {
+                  "en": "dimming (auto)",
+                  "nl": "dimmen (auto)",
+                  "de": "dimmen (auto)",
+                  "fr": "gradation (automatique)"
+                }
+              }
+            ],
+            "title": {
+              "en": "Screen brightness",
+              "nl": "Scherm helderheid",
+              "de": "Bildschirmhelligkeit",
+              "fr": "Luminosité de l'écran"
+            }
+          }
+        ]
+      },
+      {
+        "id": "set_tuner_frequency",
+        "title": {
+          "en": "Set tuner frequency",
+          "nl": "Wijzig tunerfrequentie",
+          "de": "TunerFrequenz einstellen",
+          "fr": "Régler la fréquence du tuner"
+        },
+        "titleFormatted": {
+          "en": "Set tuner frequency to [[frequency]]",
+          "nl": "Wijzig tunerfrequentie naar [[frequency]]",
+          "de": "TunerFrequenz einstellen auf [[frequency]]",
+          "fr": "Régler la fréquence du tuner sur [[frequency]]"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=receiver"
+          },
+          {
+            "name": "frequency",
+            "type": "text",
+            "placeholder": {
+              "en": "92.6"
+            },
+            "title": {
+              "en": "Tuner frequency",
+              "nl": "Tuner frequentie",
+              "de": "Tunerfrequenz",
+              "fr": "Fréquence du tuner"
+            }
+          }
+        ]
+      },
+      {
+        "id": "set_tuner_preset",
+        "title": {
+          "en": "Set tuner preference channel",
+          "nl": "Wijzig tuner voorkeurskanaal",
+          "de": "Stellen Sie den Tuner-Prioritätskanal ein",
+          "fr": "Réglez le canal prioritaire du tuner"
+        },
+        "titleFormatted": {
+          "en": "Set tuner preference channel to [[preset_letter]][[preset_number]]",
+          "nl": "Wijzig tuner voorkeurskanaal naar [[preset_letter]][[preset_number]]",
+          "de": "Stellen Sie den Tuner-Prioritätskanal auf [[preset_letter]][[preset_number]]",
+          "fr": "Réglez le canal prioritaire du tuner sur [[preset_letter]][[preset_number]]"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=receiver"
+          },
+          {
+            "name": "preset_letter",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "A",
+                "title": {
+                  "en": "A"
+                }
+              },
+              {
+                "id": "B",
+                "title": {
+                  "en": "B"
+                }
+              },
+              {
+                "id": "C",
+                "title": {
+                  "en": "C"
+                }
+              },
+              {
+                "id": "D",
+                "title": {
+                  "en": "D"
+                }
+              },
+              {
+                "id": "E",
+                "title": {
+                  "en": "E"
+                }
+              },
+              {
+                "id": "F",
+                "title": {
+                  "en": "F"
+                }
+              },
+              {
+                "id": "G",
+                "title": {
+                  "en": "G"
+                }
+              }
+            ]
+          },
+          {
+            "name": "preset_number",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "01",
+                "title": {
+                  "en": "1"
+                }
+              },
+              {
+                "id": "02",
+                "title": {
+                  "en": "2"
+                }
+              },
+              {
+                "id": "03",
+                "title": {
+                  "en": "3"
+                }
+              },
+              {
+                "id": "04",
+                "title": {
+                  "en": "4"
+                }
+              },
+              {
+                "id": "05",
+                "title": {
+                  "en": "5"
+                }
+              },
+              {
+                "id": "06",
+                "title": {
+                  "en": "6"
+                }
+              },
+              {
+                "id": "07",
+                "title": {
+                  "en": "7"
+                }
+              },
+              {
+                "id": "08",
+                "title": {
+                  "en": "8"
+                }
+              },
+              {
+                "id": "09",
+                "title": {
+                  "en": "9"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "drivers": [
+    {
+      "discovery": "pioneer_discovery",
+      "name": {
+        "en": "Receiver"
+      },
+      "class": "amplifier",
+      "capabilities": [
+        "volume_set.main",
+        "volume_set.zone2",
+        "onoff.main",
+        "onoff.zone2",
+        "volume_down.main",
+        "volume_down.zone2",
+        "volume_mute.main",
+        "volume_mute.zone2",
+        "volume_up.main",
+        "volume_up.zone2",
+        "input_source.main",
+        "input_source.zone2",
+        "listening_mode",
+        "speaker_prev",
+        "speaker_next",
+        "speaker_playing",
+        "speaker_album",
+        "speaker_track",
+        "speaker_artist",
+        "speaker_position"
+      ],
+      "capabilitiesOptions": {
+        "volume_set.main": {
+          "title": "volume main"
+        },
+        "volume_set.zone2": {
+          "title": "volume zone2"
+        },
+        "onoff.main": {
+          "title": "onoff main"
+        },
+        "onoff.zone2": {
+          "title": "onoff zone2"
+        },
+        "volume_down.main": {
+          "title": "volume down main"
+        },
+        "volume_down.zone2": {
+          "title": "volume down zone2"
+        },
+        "volume_mute.main": {
+          "title": "volume mute main"
+        },
+        "volume_mute.zone2": {
+          "title": "volume mute zone2"
+        },
+        "volume_up.main": {
+          "title": "volume up main"
+        },
+        "volume_up.zone2": {
+          "title": "volume up zone2"
+        },
+        "input_source.main": {
+          "title": "input source main"
+        },
+        "input_source.zone2": {
+          "title": "input source zone2"
+        }
+      },
+      "images": {
+        "large": "/drivers/vsx/assets/images/large.png",
+        "small": "/drivers/vsx/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_receiver"
+          },
+          "options": {
+            "singular": true
+          }
+        },
+        {
+          "id": "search_device"
+        },
+        {
+          "id": "loading",
+          "template": "loading"
+        },
+        {
+          "id": "list_manual_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_receiver"
+          }
+        },
+        {
+          "id": "add_receiver",
+          "template": "add_devices"
+        }
+      ],
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Amplifier settings",
+            "nl": "Versterker instellingen",
+            "de": "Verstärkereinstellungen",
+            "fr": "Paramètres de l'amplificateur"
+          },
+          "children": [
+            {
+              "id": "ipAddress",
+              "type": "text",
+              "label": {
+                "en": "IP address of your Pioneer",
+                "nl": "IP adres van de Pioneer",
+                "de": "IP-Adresse Ihres Pioneer",
+                "fr": "IP Adresse de votre Pioneer"
+              },
+              "value": ""
+            },
+            {
+              "id": "port",
+              "type": "number",
+              "label": {
+                "en": "Telnet port of your Pioneer",
+                "nl": "Telnet poort van de Pioneer",
+                "de": "Telnet-Port Ihres Pioneer",
+                "fr": "Telnet Port de votre Pioneer"
+              },
+              "value": 8102,
+              "attr": {
+                "min": 1,
+                "max": 65535
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "General settings",
+            "nl": "Algemene instellingen",
+            "de": "Allgemeine Einstellungen",
+            "fr": "Réglages généraux"
+          },
+          "children": [
+            {
+              "id": "maxVolume",
+              "type": "number",
+              "label": {
+                "en": "Maximum volume",
+                "nl": "Maximale volume",
+                "de": "Maximales Volumen",
+                "fr": "Volume maximum"
+              },
+              "value": 60,
+              "min": 0,
+              "max": 100,
+              "units": "%",
+              "hint": {
+                "en": "This setting sets the volume limit used by the application",
+                "nl": "Met deze instelling wordt de maximale volume ingesteld die door de applicatie wordt gebruikt",
+                "de": "Diese Einstellung legt die von der Anwendung verwendete Lautstärkebegrenzung fest",
+                "fr": "Ce paramètre définit la limite de volume utilisée par l'application"
+              }
+            },
+            {
+              "id": "networkStbyWarning",
+              "type": "checkbox",
+              "value": false,
+              "label": {
+                "en": "Hide network standby wanring",
+                "nl": "Verberg network standby waarschuwing",
+                "de": "Netzwerk-Standby-Warnung ausblenden",
+                "fr": "Masquer l'avertissement de veille réseau"
+              }
+            },
+            {
+              "id": "enableZone2Capabilities",
+              "type": "checkbox",
+              "value": false,
+              "label": {
+                "en": "Enable zone2 capabilities. Caution: If zone2 is deactivated, all flow cards using zone2 capabilities will be removed.",
+                "nl": "Functie voor zone2 activeren. Let op: Als zone2 wordt gedeactiveerd, worden alle flow kaarten die zone2 gebruiken verwijderd.",
+                "de": "Zone2-Funktionen aktivieren. Achtung: Wenn zone2 deaktiviert wird, werden alle Flusskarten, die zone2 Funtionen verwenden, entfernt.",
+                "fr": "Activer les capacités de la zone2. Attention : si la zone2 est désactivée, toutes les cartes de débit utilisant la zone2 seront supprimées."
+              }
+            }
+          ]
+        }
+      ],
+      "id": "receiver"
+    },
+    {
+      "discovery": "pioneer_discovery",
+      "name": {
+        "en": "VSX"
+      },
+      "deprecated": true,
+      "class": "amplifier",
+      "capabilities": [
+        "volume_set",
+        "onoff",
+        "volume_down",
+        "volume_mute",
+        "volume_up",
+        "input_source"
+      ],
+      "capabilitiesOptions": {
+        "volume_set": {
+          "min": -80,
+          "max": -25,
+          "step": 0.5
+        }
+      },
+      "images": {
+        "large": "/drivers/vsx/assets/images/large.png",
+        "small": "/drivers/vsx/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          },
+          "options": {
+            "singular": true
+          }
+        },
+        {
+          "id": "manual_pairing"
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Amplifier settings",
+            "nl": "Versterker instellingen",
+            "de": "Verstärkereinstellungen",
+            "fr": "Paramètres de l'amplificateur"
+          },
+          "children": [
+            {
+              "id": "ip",
+              "type": "text",
+              "label": {
+                "en": "IP address of your Pioneer",
+                "nl": "IP adres van de Pioneer",
+                "de": "IP-Adresse Ihres Pioneer",
+                "fr": "IP Adresse de votre Pioneer"
+              },
+              "value": ""
+            },
+            {
+              "id": "telnetPort",
+              "type": "number",
+              "label": {
+                "en": "Telnet port of your Pioneer",
+                "nl": "Telnet poort van de Pioneer",
+                "de": "Telnet-Port Ihres Pioneer",
+                "fr": "Telnet Port de votre Pioneer"
+              },
+              "value": 8102,
+              "attr": {
+                "min": 1,
+                "max": 65535
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "General settings",
+            "nl": "Algemene instellingen",
+            "de": "Allgemeine Einstellungen",
+            "fr": "Réglages généraux"
+          },
+          "children": [
+            {
+              "id": "maxVolume",
+              "type": "number",
+              "label": {
+                "en": "Maximum volume in decibels",
+                "nl": "Maximale volume in decibels",
+                "de": "Maximales Volumen in Dezibel",
+                "fr": "Volume maximum en décibels"
+              },
+              "value": -25,
+              "min": -79,
+              "max": 12,
+              "units": "decibels",
+              "hint": {
+                "en": "This setting sets the volume limit used by the application",
+                "nl": "Met deze instelling wordt de maximale volume ingesteld die door de applicatie wordt gebruikt",
+                "de": "Diese Einstellung legt die von der Anwendung verwendete Lautstärkebegrenzung fest",
+                "fr": "Ce paramètre définit la limite de volume utilisée par l'application"
+              }
+            }
+          ]
+        }
+      ],
+      "id": "vsx"
+    }
+  ],
+  "capabilities": {
+    "input_source": {
+      "type": "enum",
+      "title": {
+        "en": "Source",
+        "nl": "Ingang",
+        "de": "Eingang",
+        "fr": "Source"
+      },
+      "desc": {
+        "en": "Input of the Pioneer",
+        "nl": "Ingang van de Pioneer",
+        "de": "Eingang des Pioneer",
+        "fr": "Source du Pioneer"
+      },
+      "values": [
+        {
+          "id": "25",
+          "title": {
+            "en": "BD"
+          }
+        },
+        {
+          "id": "04",
+          "title": {
+            "en": "DVD"
+          }
+        },
+        {
+          "id": "15",
+          "title": {
+            "en": "DVR/BDR"
+          }
+        },
+        {
+          "id": "06",
+          "title": {
+            "en": "SAT/CBL"
+          }
+        },
+        {
+          "id": "49",
+          "title": {
+            "en": "GAME"
+          }
+        },
+        {
+          "id": "01",
+          "title": {
+            "en": "CD"
+          }
+        },
+        {
+          "id": "05",
+          "title": {
+            "en": "TV"
+          }
+        },
+        {
+          "id": "02",
+          "title": {
+            "en": "Tuner"
+          }
+        },
+        {
+          "id": "38",
+          "title": {
+            "en": "Internet Radio"
+          }
+        },
+        {
+          "id": "45",
+          "title": {
+            "en": "Favorites"
+          }
+        },
+        {
+          "id": "17",
+          "title": {
+            "en": "iPod/USB"
+          }
+        },
+        {
+          "id": "10",
+          "title": {
+            "en": "VIDEO 1"
+          }
+        },
+        {
+          "id": "14",
+          "title": {
+            "en": "VIDEO 2"
+          }
+        },
+        {
+          "id": "19",
+          "title": {
+            "en": "HDMI 1"
+          }
+        },
+        {
+          "id": "20",
+          "title": {
+            "en": "HDMI 2"
+          }
+        },
+        {
+          "id": "21",
+          "title": {
+            "en": "HDMI 3"
+          }
+        },
+        {
+          "id": "22",
+          "title": {
+            "en": "HDMI 4"
+          }
+        },
+        {
+          "id": "23",
+          "title": {
+            "en": "HDMI 5"
+          }
+        },
+        {
+          "id": "24",
+          "title": {
+            "en": "HDMI 6"
+          }
+        },
+        {
+          "id": "34",
+          "title": {
+            "en": "HDMI 7"
+          }
+        },
+        {
+          "id": "26",
+          "title": {
+            "en": "HMG"
+          }
+        },
+        {
+          "id": "48",
+          "title": {
+            "en": "MHL"
+          }
+        },
+        {
+          "id": "03",
+          "title": {
+            "en": "CD-R/TAPE"
+          }
+        },
+        {
+          "id": "00",
+          "title": {
+            "en": "PHONO"
+          }
+        },
+        {
+          "id": "33",
+          "title": {
+            "en": "ADAPTER PORT"
+          }
+        }
+      ],
+      "getable": true,
+      "setable": true,
+      "uiComponent": "picker",
+      "insights": false
+    },
+    "listening_mode": {
+      "type": "enum",
+      "title": {
+        "en": "Listening mode",
+        "nl": "Luister modus",
+        "de": "Hörmodus",
+        "fr": "Mode d'écoute"
+      },
+      "desc": {
+        "en": "Listening mode of the Pioneer",
+        "nl": "Luister modus van de Pioneer",
+        "de": "Hörmodus des Pioneer",
+        "fr": "Mode d'écoute du Pioneer"
+      },
+      "values": [
+        {
+          "id": "0001",
+          "title": {
+            "en": "Stereo(Auto)"
+          }
+        },
+        {
+          "id": "0006",
+          "title": {
+            "en": "Auto Surround"
+          }
+        },
+        {
+          "id": "0009",
+          "title": {
+            "en": "Stereo(Direct)"
+          }
+        },
+        {
+          "id": "0010",
+          "title": {
+            "en": "Standard"
+          }
+        },
+        {
+          "id": "0106",
+          "title": {
+            "en": "Expanded Theater(Movie)"
+          }
+        },
+        {
+          "id": "0112",
+          "title": {
+            "en": "Extended Stereo(Music)"
+          }
+        },
+        {
+          "id": "0118",
+          "title": {
+            "en": "Advanced Game(Game)"
+          }
+        },
+        {
+          "id": "0151",
+          "title": {
+            "en": "Auto Level Control(A.L.C.)"
+          }
+        },
+        {
+          "id": "0007",
+          "title": {
+            "en": "Direct"
+          }
+        },
+        {
+          "id": "0008",
+          "title": {
+            "en": "Pure Direct"
+          }
+        },
+        {
+          "id": "0152",
+          "title": {
+            "en": "Optimum Surround"
+          }
+        },
+        {
+          "id": "0101",
+          "title": {
+            "en": "Action"
+          }
+        },
+        {
+          "id": "0102",
+          "title": {
+            "en": "Sci-Fi"
+          }
+        },
+        {
+          "id": "0103",
+          "title": {
+            "en": "Drama"
+          }
+        },
+        {
+          "id": "0104",
+          "title": {
+            "en": "Entertainment show"
+          }
+        },
+        {
+          "id": "0105",
+          "title": {
+            "en": "Mono Film"
+          }
+        },
+        {
+          "id": "0107",
+          "title": {
+            "en": "Classical"
+          }
+        },
+        {
+          "id": "0109",
+          "title": {
+            "en": "Unplugged"
+          }
+        },
+        {
+          "id": "0110",
+          "title": {
+            "en": "Rock/Pop"
+          }
+        },
+        {
+          "id": "0116",
+          "title": {
+            "en": "TV Surround"
+          }
+        },
+        {
+          "id": "0117",
+          "title": {
+            "en": "Sports"
+          }
+        },
+        {
+          "id": "0000",
+          "title": {
+            "en": "Unknown"
+          }
+        }
+      ],
+      "getable": true,
+      "setable": true,
+      "uiComponent": "picker",
+      "insights": false
+    }
+  },
+  "discovery": {
+    "pioneer_discovery": {
+      "type": "ssdp",
+      "ssdp": {
+        "search": "urn:schemas-upnp-org:device:MediaRenderer:1"
+      },
+      "id": "{{headers.usn}}",
+      "conditions": [
+        [
+          {
+            "field": "headers.st",
+            "match": {
+              "type": "string",
+              "value": "urn:schemas-upnp-org:device:MediaRenderer:1"
+            }
+          }
+        ]
+      ]
+    }
+  },
+  "signals": {
+    "ir": {
+      "pioneerIRSignal": {
+        "type": "prontohex",
+        "repetitions": 10,
+        "cmds": {
+          "POWER_ON.main": "0000 006d 0000 0022 0155 00ac 0015 0040 0015 0015 0015 0040 0015 0015 0015 0015 0015 0040 0015 0015 0015 0040 0015 0015 0015 0040 0015 0015 0015 0040 0015 0040 0015 0015 0015 0040 0015 0015 0015 0015 0015 0040 0015 0015 0015 0040 0015 0040 0015 0015 0015 0015 0015 0015 0015 0040 0015 0015 0015 0040 0015 0015 0015 0015 0015 0040 0015 0040 0015 0040 0015 0594",
+          "POWER_ON.zone2": "0000 0066 0088 0000 0158 00ad 0016 0040 0016 0015 0017 003f 0017 0014 0016 0014 0017 003f 0017 0014 0016 0040 0016 0014 0017 003f 0016 0015 0016 0040 0016 003f 0017 0014 0016 003f 0016 0015 0017 0014 0016 0015 0017 003f 0017 003f 0017 003f 0017 0014 0016 0014 0017 003f 0016 0040 0016 003f 0016 0015 0017 0014 0016 0015 0016 003f 0017 003f 0017 0014 0016 040e 0158 00ac 0016 0040 0016 0014 0017 003f 0017 0014 0016 0014 0017 003f 0017 0014 0016 003f 0016 0014 0017 003f 0016 0015 0016 003f 0016 003f 0017 0014 0016 003f 0016 0014 0017 0014 0016 0015 0017 0014 0016 0014 0017 003f 0017 0014 0016 003f 0016 003f 0016 003f 0016 003f 0016 003f 0017 003f 0017 0014 0016 003f 0016 0014 0017 0014 0016 040e 0158 00ac 0016 003f 0016 0014 0017 003f 0017 0014 0016 0014 0017 003f 0017 0014 0016 003f 0016 0014 0016 003f 0016 0015 0016 003f 0017 003f 0017 0014 0016 003f 0016 0014 0017 0014 0016 0014 0017 003f 0017 003f 0017 003f 0017 0014 0016 0014 0017 003f 0016 003f 0016 003f 0016 0015 0017 0014 0016 0015 0017 003f 0017 003f 0017 0014 0016 040e 0158 00ac 0016 003f 0016 0014 0017 003f 0017 0014 0016 0014 0017 003f 0017 0014 0016 003f 0016 0014 0016 003f 0016 0015 0016 003f 0017 003f 0017 0014 0016 003f 0016 0014 0017 0014 0016 0014 0017 0014 0016 0014 0017 003f 0017 0014 0016 003f 0016 003f 0016 003f 0016 003f 0016 003f 0017 003f 0017 0014 0016 003f 0016 0014 0017 0014 0016 00ad"
+        }
+      }
+    }
+  }
+}

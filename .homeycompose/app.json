@@ -1,23 +1,35 @@
 {
   "id": "com.pioneer.avr",
-  "version": "0.4.1",
-  "compatibility": ">=1.5.0",
-  "sdk": 2,
+  "version": "1.0.1",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "brandColor": "#A90533",
   "name": {
     "en": "Pioneer AVR"
   },
   "description": {
-    "en": "Pioneer AV-Receiver application using SSDP and Telnet.",
-    "nl": "Pioneer AV-Receiver applicatie gebruik makend van SSDP en Telnet.",
-    "de": "Pioneer AV-Receiver-Anwendung mit SSDP und Telnet.",
-    "fr": "Application Pioneer AV-Receiver utilisant SSDP et Telnet"
+    "en": "Experience sounds even better",
+    "nl": "Ervaar geluid nog beter.",
+    "de": "Erleben Sie Klänge noch besser.",
+    "fr": "L'expérience sonne encore mieux."
   },
   "category": [
-    "music"
+    "music",
+    "appliances"
   ],
-  "permissions": [],
+  "tags": {
+    "en": [
+      "receiver",
+      "amplifier",
+      "audio",
+      "music"
+    ]
+  },
+  "permissions": [
+    "homey:wireless:ir"
+  ],
   "images": {
-    "large": "/assets/images/large.png",
+    "large": "/assets/images/pioneerLivingRoom.jpeg",
     "small": "/assets/images/small.png"
   },
   "author": {
@@ -31,5 +43,11 @@
         "username": "rinwinte"
       }
     }
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/rinwinte/com.pioneer.avr/issues"
+  },
+  "source": "https://github.com/rinwinte/com.pioneer.avr",
+  "homepage": "https://github.com/rinwinte/com.pioneer.avr",
+  "support": "mailto:contact@rinzewinters.nl"
 }

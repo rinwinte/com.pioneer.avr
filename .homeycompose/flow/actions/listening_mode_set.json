@@ -1,0 +1,148 @@
+{
+  "id": "listening_mode_set",
+  "title": {
+    "en": "Change the listening mode",
+    "nl": "Wijzig de luister modus",
+    "de": "Ändern Sie den Hörmodus",
+    "fr": "Changer le mode d'écoute"
+  },
+  "titleFormatted": {
+    "en": "Change the listening mode to [[input_source]]",
+    "nl": "Wijzig de luister modus naar [[input_source]]",
+    "de": "Ändern Sie den Hörmodus zum [[input_source]]",
+    "fr": "Changer le mode d'écoute sur [[input_source]]"
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=vsx"    
+    },
+    {
+      "name": "input_source",
+      "type": "dropdown",
+      "values": [
+        {
+          "id": "0001",
+          "title": {
+            "en": "Stereo(Auto)"
+          }
+        },
+        {
+          "id": "0010",
+          "title": {
+            "en": "Standard"
+          }
+        },
+        {
+          "id": "0106",
+          "title": {
+            "en": "Expanded Theater(Movie)"
+          }
+        },
+        {
+          "id": "0112",
+          "title": {
+            "en": "Extended Stereo(Music)"
+          }
+        },
+        {
+          "id": "0118",
+          "title": {
+            "en": "Advanced Game(Game)"
+          }
+        },
+        {
+          "id": "0151",
+          "title": {
+            "en": "Auto Level Control(A.L.C.)"
+          }
+        },
+        {
+          "id": "0007",
+          "title": {
+            "en": "Direct"
+          }
+        },
+        {
+          "id": "0008",
+          "title": {
+            "en": "Pure Direct"
+          }
+        },
+        {
+          "id": "0152",
+          "title": {
+            "en": "Optimum Surround"
+          }
+        },
+        {
+          "id": "0101",
+          "title": {
+            "en": "Action"
+          }
+        },
+        {
+          "id": "0102",
+          "title": {
+            "en": "Sci-Fi"
+          }
+        },
+        {
+          "id": "0103",
+          "title": {
+            "en": "Drama"
+          }
+        },
+        {
+          "id": "0104",
+          "title": {
+            "en": "Entertainment show"
+          }
+        },
+        {
+          "id": "0105",
+          "title": {
+            "en": "Mono Film"
+          }
+        },
+        {
+          "id": "0107",
+          "title": {
+            "en": "Classical"
+          }
+        },
+        {
+          "id": "0109",
+          "title": {
+            "en": "Unplugged"
+          }
+        },
+        {
+          "id": "0110",
+          "title": {
+            "en": "Rock/Pop"
+          }
+        },
+        {
+          "id": "0116",
+          "title": {
+            "en": "TV Surround"
+          }
+        },
+        {
+          "id": "0117",
+          "title": {
+            "en": "Sports"
+          }
+        },
+        {
+          "id": "0000",
+          "title": {
+            "en": "Unknown"
+          }
+        }
+      ]
+    }
+  ]
+}

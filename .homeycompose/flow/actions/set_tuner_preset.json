@@ -1,0 +1,130 @@
+{
+  "id": "set_tuner_preset",
+  "title": {
+    "en": "Set tuner preference channel",
+    "nl": "Wijzig tuner voorkeurskanaal",
+    "de": "Stellen Sie den Tuner-Prioritätskanal ein",
+    "fr": "Réglez le canal prioritaire du tuner"
+  },
+  "titleFormatted": {
+    "en": "Set tuner preference channel to [[preset_letter]][[preset_number]]",
+    "nl": "Wijzig tuner voorkeurskanaal naar [[preset_letter]][[preset_number]]",
+    "de": "Stellen Sie den Tuner-Prioritätskanal auf [[preset_letter]][[preset_number]]",
+    "fr": "Réglez le canal prioritaire du tuner sur [[preset_letter]][[preset_number]]"
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=receiver"    
+    },
+    {
+      "name": "preset_letter",
+      "type": "dropdown",
+      "values": [
+        {
+          "id": "A",
+          "title": {
+            "en": "A"
+          }
+        },
+        {
+          "id": "B",
+          "title": {
+            "en": "B"
+          }
+        },
+        {
+          "id": "C",
+          "title": {
+            "en": "C"
+          }
+        },
+        {
+          "id": "D",
+          "title": {
+            "en": "D"
+          }
+        },
+        {
+          "id": "E",
+          "title": {
+            "en": "E"
+          }
+        },
+        {
+          "id": "F",
+          "title": {
+            "en": "F"
+          }
+        },
+        {
+          "id": "G",
+          "title": {
+            "en": "G"
+          }
+        }
+      ]
+    },
+    {
+      "name": "preset_number",
+      "type": "dropdown",
+      "values": [
+        {
+          "id": "01",
+          "title": {
+            "en": "1"
+          }
+        },
+        {
+          "id": "02",
+          "title": {
+            "en": "2"
+          }
+        },
+        {
+          "id": "03",
+          "title": {
+            "en": "3"
+          }
+        },
+                {
+          "id": "04",
+          "title": {
+            "en": "4"
+          }
+        },
+        {
+          "id": "05",
+          "title": {
+            "en": "5"
+          }
+        },
+        {
+          "id": "06",
+          "title": {
+            "en": "6"
+          }
+        },
+        {
+          "id": "07",
+          "title": {
+            "en": "7"
+          }
+        },
+        {
+          "id": "08",
+          "title": {
+            "en": "8"
+          }
+        },
+        {
+          "id": "09",
+          "title": {
+            "en": "9"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": "on",
+  "highlight": true,
+  "title": {
+    "en": "Turn on",
+    "nl": "Zet aan",
+    "de": "Einschalten",
+    "fr": "Activer",
+    "it": "Attiva",
+    "sv": "Aktivera",
+    "no": "Slå på",
+    "es": "Encender",
+    "da": "Tændt"  
+  },
+  "titleFormatted": {
+    "en": "Turn [[zone]] on ",
+    "nl": "Zet [[zone]] aan",
+    "de": "[[zone]] Einschalten",
+    "fr": "Activer [[zone]]",
+    "it": "Attiva [[zone]]",
+    "sv": "Aktivera [[zone]]",
+    "no": "Slå [[zone]] på",
+    "es": "Encender [[zone]]",
+    "da": "Tændt [[zone]]"  
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=receiver"    
+    },
+    {
+      "name": "zone",
+      "type": "dropdown",
+      "values": [
+        {
+          "id": "main",
+          "title": {
+            "en": "main",
+            "nl": "hoofdzone",
+            "de": "Hauptzone",
+            "fr": "zone principale"
+          }
+        },
+        {
+          "id": "zone2",
+          "title": {
+            "en": "zone 2",
+            "nl": "zone 2",
+            "de": "zone 2",
+            "fr": "zone 2"
+          }
+        }
+      ]
+    }
+  ]
+}

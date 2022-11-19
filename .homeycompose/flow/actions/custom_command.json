@@ -1,0 +1,41 @@
+{
+  "id": "custom_command",
+  "title": {
+    "en": "Send a custom command",
+    "nl": "Stuur een aangepast commando",
+    "de": "Benutzerdefinierten Befehl senden",
+    "fr": "Envoyer une commande personnalisée"
+  },
+  "titleFormatted": {
+    "en": "Send custom command: [[command]]",
+    "nl": "Stuur een aangepast commando: [[command]]",
+    "de": "Benutzerdefinierten Befehl senden: [[command]]",
+    "fr": "Envoyer une commande personnalisée: [[command]]"
+  },
+  "hint": {
+    "en": "Custom commands allow you to specify custom data to send to your Pioneer device. Supported commands can be found in the manual https://github.com/rinwinte/com.pioneer.avr/manual.",
+    "nl": "Speciale commando's geven de mogelijkheid om specifieke data te versturen naar uw Pioneer versterker. Ondersteunde commando's vind je in de handleiding https://github.com/rinwinte/com.pioneer.avr/manual.",
+    "de": "Mit benutzerdefinierten Befehlen können Sie benutzerdefinierte Daten angeben, die an Ihr Pioneer-Gerät gesendet werden sollen. Unterstützte Befehle finden Sie im Handbuch https://github.com/rinwinte/com.pioneer.avr/manual.",
+    "fr": "Les commandes personnalisées vous permettent de spécifier des données personnalisées à envoyer à votre appareil Pioneer. Les commandes prises en charge peuvent être trouvées dans le manuel https://github.com/rinwinte/com.pioneer.avr/manual. "
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=receiver"    
+    },
+    {
+      "name": "command",
+      "type": "text",
+      "placeholder": {
+        "en": "e.g. PO or 0009SR"
+      },
+      "title": {
+        "en": "Command",
+        "nl": "Commando",
+        "de": "Kommando",
+        "fr": "Commando"
+      }
+    }
+  ]
+}

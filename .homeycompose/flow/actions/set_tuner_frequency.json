@@ -1,0 +1,35 @@
+{
+  "id": "set_tuner_frequency",
+  "title": {
+    "en": "Set tuner frequency",
+    "nl": "Wijzig tunerfrequentie",
+    "de": "TunerFrequenz einstellen",
+    "fr": "Régler la fréquence du tuner"
+  },
+  "titleFormatted": {
+    "en": "Set tuner frequency to [[frequency]]",
+    "nl": "Wijzig tunerfrequentie naar [[frequency]]",
+    "de": "TunerFrequenz einstellen auf [[frequency]]",
+    "fr": "Régler la fréquence du tuner sur [[frequency]]"
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=receiver"    
+    },
+    {
+      "name": "frequency",
+      "type": "text",
+      "placeholder": {
+        "en": "92.6"
+      },
+      "title": {
+        "en": "Tuner frequency",
+        "nl": "Tuner frequentie",
+        "de": "Tunerfrequenz",
+        "fr": "Fréquence du tuner"
+      }
+    }
+  ]
+}

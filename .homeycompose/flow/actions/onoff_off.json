@@ -1,0 +1,57 @@
+{
+  "id": "off",
+  "highlight": true,
+  "title": {
+    "en": "Turn off",
+    "nl": "Zet uit",
+    "de": "Ausschalten",
+    "fr": "Désactiver",
+    "it": "Disattiva",
+    "sv": "stäng av",
+    "no": "Slå av",
+    "es": "Apagar",
+    "da": "Slukket"     
+  },
+  "titleFormatted": {
+    "en": "Turn [[zone]] off",
+    "nl": "Zet [[zone]] uit",
+    "de": "[[zone]] Ausschalten",
+    "fr": "Désactiver [[zone]]",
+    "it": "Disattiva [[zone]]",
+    "sv": "Stäng [[zone]] av",
+    "no": "Slå [[zone]] av",
+    "es": "Apagar [[zone]]",
+    "da": "Slukket [[zone]]"     
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=receiver"    
+    },
+    {
+      "name": "zone",
+      "type": "dropdown",
+      "values": [
+        {
+          "id": "main",
+          "title": {
+            "en": "main",
+            "nl": "hoofdzone",
+            "de": "Hauptzone",
+            "fr": "zone principale"
+          }
+        },
+        {
+          "id": "zone2",
+          "title": {
+            "en": "zone 2",
+            "nl": "zone 2",
+            "de": "zone 2",
+            "fr": "zone 2"
+          }
+        }
+      ]
+    }
+  ]
+}

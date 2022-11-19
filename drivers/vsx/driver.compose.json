@@ -1,8 +1,9 @@
 {
-  "discovery": "pioneer",
+  "discovery": "pioneer_discovery",
   "name": {
     "en": "VSX"
   },
+  "deprecated": true,
   "$extends": [
     "source"
   ],

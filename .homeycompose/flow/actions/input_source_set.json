@@ -1,16 +1,46 @@
 {
   "id": "input_source_set",
   "title": {
-    "en": "Switch the input",
+    "en": "Switch the input source",
     "nl": "Wijzig de ingangsbron",
     "de": "Eingangsquelle wechseln",
     "fr": "Changer la source d'entrée"
+  },
+  "titleFormatted": {
+    "en": "Switch the [[zone]] input to [[input_source]]",
+    "nl": "Wijzig [[zone]] ingangsbron naar [[input_source]]",
+    "de": "[[zone]] eingangsquelle wechseln zum [[input_source]]",
+    "fr": "Changer l'entrée de [[zone]] sur [[input_source]]"
   },
   "args": [
     {
       "name": "device",
       "type": "device",
-      "filter": "driver_id=vsx"    
+      "filter": "driver_id=receiver"    
+    },
+    {
+      "name": "zone",
+      "type": "dropdown",
+      "values": [
+        {
+          "id": "main",
+          "title": {
+            "en": "main",
+            "nl": "hoofdzone",
+            "de": "Hauptzone",
+            "fr": "zone principale"
+          }
+        },
+        {
+          "id": "zone2",
+          "title": {
+            "en": "zone 2",
+            "nl": "zone 2",
+            "de": "zone 2",
+            "fr": "zone 2"
+          }
+        }
+      ]
     },
     {
       "name": "input_source",

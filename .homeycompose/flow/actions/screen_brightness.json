@@ -1,0 +1,79 @@
+{
+  "id": "set_screen_brightness",
+  "title": {
+    "en": "Set screen brightness",
+    "nl": "Wijzig scherm helderheid",
+    "de": "Stellen Sie die Bildschirmhelligkeit ein",
+    "fr": "Régler la luminosité de l'écran"
+  },
+  "titleFormatted": {
+    "en": "Set screen brightness to [[brightness]]",
+    "nl": "Wijzig scherm helderheid naar [[brightness]]",
+    "de": "Stellen Sie die Bildschirmhelligkeit ein auf [[brightness]]",
+    "fr": "Régler la luminosité de l'écran sur [[brightness]]"
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=receiver"    
+    },
+    {
+      "name": "brightness",
+      "type": "dropdown",
+      "values": [
+        {
+          "id": "0",
+          "title": {
+            "en": "really bright",
+            "nl": "zeer helder",
+            "de": "wirklich hell",
+            "fr": "très lumineux"
+          }
+        },
+        {
+          "id": "1",
+          "title": {
+            "en": "bright",
+            "nl": "helder",
+            "de": "hell",
+            "fr": "lumineux"
+          }
+        },
+        {
+          "id": "2",
+          "title": {
+            "en": "dark",
+            "nl": "donker",
+            "de": "dunkel",
+            "fr": "foncé"
+          }
+        },
+        {
+          "id": "3",
+          "title": {
+            "en": "off",
+            "nl": "uit",
+            "de": "aus",
+            "fr": "inactive"
+          }
+        },
+        {
+          "id": "9",
+          "title": {
+            "en": "dimming (auto)",
+            "nl": "dimmen (auto)",
+            "de": "dimmen (auto)",
+            "fr": "gradation (automatique)"
+          }
+        }
+      ],
+      "title": {
+        "en": "Screen brightness",
+        "nl": "Scherm helderheid",
+        "de": "Bildschirmhelligkeit",
+        "fr": "Luminosité de l'écran"
+      }
+    }
+  ]
+}

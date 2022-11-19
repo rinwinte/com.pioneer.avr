@@ -1,0 +1,189 @@
+{
+  "discovery": "pioneer_discovery",
+  "name": {
+    "en": "Receiver"
+  },
+  "$extends": [
+    "source"
+  ],
+  "class": "amplifier",
+  "capabilities": [
+    "volume_set.main",
+    "volume_set.zone2",
+    "onoff.main",
+    "onoff.zone2",
+    "volume_down.main",
+    "volume_down.zone2",
+    "volume_mute.main",
+    "volume_mute.zone2",
+    "volume_up.main",
+    "volume_up.zone2",
+    "input_source.main",
+    "input_source.zone2",
+    "listening_mode"
+  ],
+  "capabilitiesOptions": {
+  "volume_set.main": {
+    "title": "volume main"
+  },
+  "volume_set.zone2": {
+    "title": "volume zone2"
+  },
+  "onoff.main": {
+    "title": "onoff main"
+  },
+  "onoff.zone2": {
+    "title": "onoff zone2"
+  },
+  "volume_down.main": {
+    "title": "volume down main"
+  },
+  "volume_down.zone2": {
+    "title": "volume down zone2"
+  },
+  "volume_mute.main": {
+    "title": "volume mute main"
+  },
+  "volume_mute.zone2": {
+    "title": "volume mute zone2"
+  },
+  "volume_up.main": {
+    "title": "volume up main"
+  },
+  "volume_up.zone2": {
+    "title": "volume up zone2"
+  },
+  "input_source.main": {
+    "title": "input source main"
+  },
+  "input_source.zone2": {
+    "title": "input source zone2"
+  }
+ },
+  "images": {
+    "large": "/drivers/vsx/assets/images/large.png",
+    "small": "/drivers/vsx/assets/images/small.png"
+  },
+  "pair": [
+     {
+      "id": "list_devices",
+      "template": "list_devices",
+      "navigation": {
+        "next": "add_receiver"
+      },
+      "options": {
+        "singular": true
+      }
+    },
+    {
+      "id": "search_device"
+    },
+    {
+      "id": "loading",
+      "template": "loading"
+    },
+    {
+      "id": "list_manual_devices",
+      "template": "list_devices",
+      "navigation": {
+        "next": "add_receiver"
+      }
+    },
+    {
+      "id": "add_receiver",
+      "template": "add_devices"
+    }
+  ],
+  "settings": [
+    {
+      "type": "group",
+      "label": {
+        "en": "Amplifier settings",
+        "nl": "Versterker instellingen",
+        "de": "Verstärkereinstellungen",
+        "fr": "Paramètres de l'amplificateur"
+      },
+      "children": [
+        {
+          "id": "ipAddress",
+          "type": "text",
+          "label": {
+            "en": "IP address of your Pioneer",
+            "nl": "IP adres van de Pioneer",
+            "de": "IP-Adresse Ihres Pioneer",
+            "fr": "IP Adresse de votre Pioneer"
+          },
+          "value": ""
+        },
+        {
+          "id": "port",
+          "type": "number",
+          "label": {
+            "en": "Telnet port of your Pioneer",
+            "nl": "Telnet poort van de Pioneer",
+            "de": "Telnet-Port Ihres Pioneer",
+            "fr": "Telnet Port de votre Pioneer"
+          },
+          "value": 8102,
+          "attr": {
+            "min": 1,
+            "max": 65535
+          }
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "label": {
+        "en": "General settings",
+        "nl": "Algemene instellingen",
+        "de": "Allgemeine Einstellungen",
+        "fr": "Réglages généraux"
+      },
+      "children": [
+        {
+          "id": "maxVolume",
+          "type": "number",
+          "label": {
+            "en": "Maximum volume",
+            "nl": "Maximale volume",
+            "de": "Maximales Volumen",
+            "fr": "Volume maximum"
+          },
+          "value": 60,
+          "min": 0,
+          "max": 100,
+          "units": "%",
+          "hint": {
+            "en": "This setting sets the volume limit used by the application",
+            "nl": "Met deze instelling wordt de maximale volume ingesteld die door de applicatie wordt gebruikt",
+            "de": "Diese Einstellung legt die von der Anwendung verwendete Lautstärkebegrenzung fest",
+            "fr": "Ce paramètre définit la limite de volume utilisée par l'application"
+          }
+        },
+        {
+          "id": "networkStbyWarning",
+          "type": "checkbox",
+          "value": false,
+          "label": {
+            "en": "Hide network standby wanring",
+            "nl": "Verberg network standby waarschuwing",
+            "de": "Netzwerk-Standby-Warnung ausblenden",
+            "fr": "Masquer l'avertissement de veille réseau"
+          }
+        },
+        {
+          "id": "enableZone2Capabilities",
+          "type": "checkbox",
+          "value": false,
+          "label": {
+            "en": "Enable zone2 capabilities. Caution: If zone2 is deactivated, all flow cards using zone2 capabilities will be removed.",
+            "nl": "Functie voor zone2 activeren. Let op: Als zone2 wordt gedeactiveerd, worden alle flow kaarten die zone2 gebruiken verwijderd.",
+            "de": "Zone2-Funktionen aktivieren. Achtung: Wenn zone2 deaktiviert wird, werden alle Flusskarten, die zone2 Funtionen verwenden, entfernt.",
+            "fr": "Activer les capacités de la zone2. Attention : si la zone2 est désactivée, toutes les cartes de débit utilisant la zone2 seront supprimées."
+          }
+        }
+      ]
+    }
+  ]
+}

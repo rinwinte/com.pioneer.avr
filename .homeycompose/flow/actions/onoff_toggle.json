@@ -1,0 +1,56 @@
+{
+  "id": "toggle",
+  "title": {
+    "en": "Toggle on or off",
+    "nl": "Schakel aan of uit",
+    "de": "Ein- oder ausschalten",
+    "fr": "Alterner activé ou désactivé",
+    "it": "Attiva o disattiva",
+    "sv": "Växla på och av",
+    "no": "Veksle mellom på og av",
+    "es": "Encender o apagar",
+    "da": "Tænd eller sluk"     
+  },
+  "titleFormatted": {
+    "en": "Toggle [[zone]] on or off",
+    "nl": "Schakel [[zone]] aan of uit",
+    "de": "[[zone]] ein- oder ausschalten",
+    "fr": "Alterner [[zone]] activé ou désactivé",
+    "it": "[[zone]] attiva o disattiva",
+    "sv": "Växla [[zone]] på och av",
+    "no": "Veksle mellom [[zone]] på og av",
+    "es": "[[zone]] encender o apagar",
+    "da": "[[zone]] tænd eller sluk"     
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=receiver"    
+    },
+    {
+      "name": "zone",
+      "type": "dropdown",
+      "values": [
+        {
+          "id": "main",
+          "title": {
+            "en": "main",
+            "nl": "hoofdzone",
+            "de": "Hauptzone",
+            "fr": "zone principale"
+          }
+        },
+        {
+          "id": "zone2",
+          "title": {
+            "en": "zone 2",
+            "nl": "zone 2",
+            "de": "zone 2",
+            "fr": "zone 2"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,16 +1,46 @@
 {
   "id": "input_source_changed",
   "title": {
-    "en": "Input source has changed to",
-    "nl": "Ingangsbron is gewijzig naar",
-    "de": "Eingangsquelle hat sich geändert zu",
-    "fr": "La source d'entrée a changé en"
+    "en": "Input source has changed",
+    "nl": "Ingangsbron is gewijzig",
+    "de": "Eingangsquelle hat sich geändert",
+    "fr": "La source d'entrée a changé"
+  },
+  "titleFormatted": {
+    "en": "[[zone]] input source has changed to [[input_source]]",
+    "nl": "[[zone]] ingangsbron is gewijzigd naar [[input_source]]",
+    "de": "Eingangsquelle du [[zone]] hat sich geändert zu [[input_source]]",
+    "fr": "La source d'entrée de la [[zone]] a changé en [[input_source]]"
   },
   "args": [
     {
       "name": "device",
       "type": "device",
-      "filter": "driver_id=vsx"    
+      "filter": "driver_id=receiver"    
+    },
+    {
+      "name": "zone",
+      "type": "dropdown",
+      "values": [
+        {
+          "id": "main",
+          "title": {
+            "en": "main",
+            "nl": "hoofdzone",
+            "de": "Hauptzone",
+            "fr": "zone principale"
+          }
+        },
+        {
+          "id": "zone2",
+          "title": {
+            "en": "zone 2",
+            "nl": "zone 2",
+            "de": "zone 2",
+            "fr": "zone 2"
+          }
+        }
+      ]
     },
     {
       "name": "input_source",

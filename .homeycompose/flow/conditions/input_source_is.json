@@ -6,11 +6,41 @@
     "de": "Eingangsquelle !{{ist|ist nicht}}",
     "fr": "La source d'entrée !{{est|n'est pas}}"
   },
+  "titleFormatted": {
+    "en": "[[zone]] input source !{{is|isn't}} [[input_source]]",
+    "nl": "[[zone]] ingangsbron !{{is|is niet}} [[input_source]]",
+    "de": "Eingangsquelle de [[zone]] !{{ist|ist nicht}} [[input_source]]",
+    "fr": "La source d'entrée de la [[zone]] !{{est|n'est pas}} [[input_source]]"
+  },
   "args": [
     {
       "name": "device",
       "type": "device",
-      "filter": "driver_id=vsx"    
+      "filter": "driver_id=receiver"    
+    },
+    {
+      "name": "zone",
+      "type": "dropdown",
+      "values": [
+        {
+          "id": "main",
+          "title": {
+            "en": "main",
+            "nl": "hoofdzone",
+            "de": "Hauptzone",
+            "fr": "zone principale"
+          }
+        },
+        {
+          "id": "zone2",
+          "title": {
+            "en": "zone 2",
+            "nl": "zone 2",
+            "de": "zone 2",
+            "fr": "zone 2"
+          }
+        }
+      ]
     },
     {
       "name": "input_source",
