@@ -37,5 +37,11 @@
   },
   "0.4.1": {
     "en": "Patch for unresponsive device"
+  },
+  "1.0.1": {
+    "en": "More functionality and different device pairing."
+  },
+  "1.0.2": {
+    "en": "Patch for sentry logging"
   }
 }

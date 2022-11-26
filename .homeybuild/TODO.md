@@ -59,6 +59,8 @@ TODO ideas next release:
 HELP REMARKS:
 	If HOMEY OFFLINE Message: restart computer and not only the VirtualBox
 
+	Added captureBreadcrumb method and Severity enum to node-homey-log Log file
+
 
 
 H.M.G FUNCTION:
