@@ -55,14 +55,18 @@ Action Flow Cards:
 ## Supported Devices
 Most Pioneer models that can be controlled grough Telnet should work.
 ## Confirmed
+* VSX-824
 * VSX-921
+* VSX-923
 * VSX-926
 * VSX-1021
 * VSX-1026
+* VSX-2021
+* SC-LX57
+* SC-LX78
 
 ## Not supported
-*
-
+* VSX-933
 
 ## Configuring Network Standby
 The Network Standby option is required to control the Pioneer receiver even when it is off. In order to turn the device on again this setting has to be ON. Furthermore, it ensures a stable connection with the device.
@@ -95,10 +99,52 @@ A static IP is required to prevent the Pioneer receiver from getting a new IP ad
 ## Future updates
 These features could be added:
 
-* Zone 2 & 3 control; channel select and volume.
+* Full zone 2 & 3 control
 * Cursor remote
 * Tone control; Bass & Trebble
 * Sleep 30-90 min
 * Remote and/or panel lock (disables remote/panel)
 * Adapter port operation (Play, Pause, Next etc)
+
+## Version 0.1.0
+* Initial commit.
+
+## Version 0.1.3
+* Solved issues with port connection & added manual change port/ip setting.
+
+## Version 0.1.4
+* Added more loggign and possible fix for some devices that are not found.
+
+## Version 0.1.5
+* Bug in logging and temporarily relaxed ssdp rules for debugging.
+
+## Version 0.1.6
+* Removed manufacturer check
+
+## Version 0.1.7
+* Propably fixes for powerring the device using the buttom.
+
+## Version 0.1.8
+* Changed the way of disconnecting from the Telnet .destroy instead of .end because some devices do not reply on .end.
+
+## Version 0.2.0
+* Added input source control and flow cards.
+
+## Version 0.4.0
+* Fix for detectign power-on when manually powering the device.
+
+## Version 0.4.1
+* Path for some unresponsive devics.
+
+## Version 1.0.1
+* None backwards compatible update. Added more functionality and a different device pairing method and a tryout for zone2 features.
+
+## Version 1.0.2
+* Patch for sentry logging
+
+## Version 1.0.3
+* Temporarily patch for source input 44 not found. Extra logging to tackly zone2 capability errors.
+
+
+
 

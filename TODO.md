@@ -82,10 +82,10 @@ removed hmg_browsing.json from .homeycompose/flow/actions and temporarily placed
 HOW TO DEPLOY NEW FIRMWARE:
 	- Use CTRL + B in .js files for eslint check
 	- Sublime --> Tools eslint fix for auto fix
-	1. Inside package.json increase version number
-	2. run command: sudo npm i -g eslint
-	3. run command: sudo npm build
-	4. run command: sudo npm install -g homey
+	1. //Inside package.json increase version number
+	2. //run command: sudo npm i -g eslint
+	3. //run command: sudo npm build
+	4. //run command: sudo npm install -g homey
 	5. run command: homey app validate --level publish
 	6. run command: homey app publish
 		-> Choose Yes for updating version number

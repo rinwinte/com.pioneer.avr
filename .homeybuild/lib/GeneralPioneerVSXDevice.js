@@ -34,6 +34,7 @@ class GeneralPioneerVSXDevice extends Homey.Device {
           {
             capabilityId,
             value,
+            zone2: this.getSetting('enableZone2Capabilities'),
           },
           Log.Severity.Error
         );
