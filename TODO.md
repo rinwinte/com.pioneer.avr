@@ -97,5 +97,5 @@ HOW TO DEPLOY NEW FIRMWARE:
 	9. run command: git commit -m "commit text" 
 	10. run command: git push https://github.com/rinwinte/com.pioneer.avr.git
 		-> Add username: rinwinte
-		-> Add password: see Iphone
+		-> Add password: see token on account
 
