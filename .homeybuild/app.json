@@ -1,7 +1,7 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "com.pioneer.avr",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "brandColor": "#A90533",
@@ -345,6 +345,62 @@
           "no": "[[zone]] slått på",
           "es": "[[zone]] encendido",
           "da": "[[zone]] tændt"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=receiver"
+          },
+          {
+            "name": "zone",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "main",
+                "title": {
+                  "en": "main",
+                  "nl": "hoofdzone",
+                  "de": "Hauptzone",
+                  "fr": "zone principale"
+                }
+              },
+              {
+                "id": "zone2",
+                "title": {
+                  "en": "zone 2",
+                  "nl": "zone 2",
+                  "de": "zone 2",
+                  "fr": "zone 2"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "volume_changed",
+        "title": {
+          "en": "Volume changed",
+          "nl": "Volume veranderd",
+          "de": "Lautstärke geändert",
+          "fr": "Volume modifié",
+          "it": "Il volume è cambiato",
+          "sv": "Volymen har ändrats",
+          "no": "Volumet endret",
+          "es": "Volumen cambiado",
+          "da": "Lydstyrken ændret"
+        },
+        "titleFormatted": {
+          "en": "[[zone]] volume changed",
+          "nl": "[[zone]] volume veranderd ",
+          "de": "[[zone]] lautstärke geändert",
+          "fr": "[[zone]] modifié",
+          "it": "[[zone]] volume è cambiato",
+          "sv": "[[zone]] volymen har ändrats",
+          "no": "[[zone]] volumet endret",
+          "es": "[[zone]] volumen cambiado",
+          "da": "[[zone]] lydstyrken ændret"
         },
         "args": [
           {
@@ -1032,8 +1088,53 @@
         ]
       },
       {
+        "id": "mute",
+        "title": {
+          "en": "Mute",
+          "nl": "Demp het geluid",
+          "de": "Stummschalten",
+          "fr": "Son muet"
+        },
+        "titleFormatted": {
+          "en": "Mute [[zone]]",
+          "nl": "Demp het geluid van [[zone]]",
+          "de": "[[zone]] stumschalten",
+          "fr": "Désactiver le son de la [[zone]]"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=receiver"
+          },
+          {
+            "name": "zone",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "main",
+                "title": {
+                  "en": "main",
+                  "nl": "hoofdzone",
+                  "de": "Hauptzone",
+                  "fr": "zone principale"
+                }
+              },
+              {
+                "id": "zone2",
+                "title": {
+                  "en": "zone 2",
+                  "nl": "zone 2",
+                  "de": "zone 2",
+                  "fr": "zone 2"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
         "id": "off",
-        "highlight": true,
         "title": {
           "en": "Turn off",
           "nl": "Zet uit",
@@ -1090,7 +1191,6 @@
       },
       {
         "id": "on",
-        "highlight": true,
         "title": {
           "en": "Turn on",
           "nl": "Zet aan",
@@ -1444,6 +1544,114 @@
             ]
           }
         ]
+      },
+      {
+        "id": "set_volume_percentage",
+        "title": {
+          "en": "Set volume",
+          "nl": "Wijzig het volume",
+          "de": "Lautstärke einstellen",
+          "fr": "Régler le volume"
+        },
+        "titleFormatted": {
+          "en": "Switch the [[zone]] input to [[volume]]",
+          "nl": "Stel [[zone]] volume in op [[volume]]",
+          "de": "[[zone]] Lautstärke stellen zum [[volume]]",
+          "fr": "Réglez le volume de [[zone]] sur [[volume]]"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=receiver"
+          },
+          {
+            "name": "zone",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "main",
+                "title": {
+                  "en": "main",
+                  "nl": "hoofdzone",
+                  "de": "Hauptzone",
+                  "fr": "zone principale"
+                }
+              },
+              {
+                "id": "zone2",
+                "title": {
+                  "en": "zone 2",
+                  "nl": "zone 2",
+                  "de": "zone 2",
+                  "fr": "zone 2"
+                }
+              }
+            ]
+          },
+          {
+            "name": "volume",
+            "type": "range",
+            "title": {
+              "en": "volume",
+              "nl": "volume",
+              "de": "Volumen",
+              "fr": "volume"
+            },
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "label": "%",
+            "labelMultiplier": 100,
+            "labelDecimals": 2
+          }
+        ]
+      },
+      {
+        "id": "unmute",
+        "title": {
+          "en": "Unmute",
+          "nl": "Demp het geluid niet meer",
+          "de": "Stummschaltung aufheben",
+          "fr": "Réactiver le son"
+        },
+        "titleFormatted": {
+          "en": "Unmute [[zone]]",
+          "nl": "Demp het geluid van [[zone]] niet meer",
+          "de": "[[zone]] stummschaltung aufheben",
+          "fr": "Réactiver le son de la [[zone]]"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=receiver"
+          },
+          {
+            "name": "zone",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "main",
+                "title": {
+                  "en": "main",
+                  "nl": "hoofdzone",
+                  "de": "Hauptzone",
+                  "fr": "zone principale"
+                }
+              },
+              {
+                "id": "zone2",
+                "title": {
+                  "en": "zone 2",
+                  "nl": "zone 2",
+                  "de": "zone 2",
+                  "fr": "zone 2"
+                }
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -1613,7 +1821,7 @@
               "type": "checkbox",
               "value": false,
               "label": {
-                "en": "Hide network standby wanring",
+                "en": "Hide network standby warning",
                 "nl": "Verberg network standby waarschuwing",
                 "de": "Netzwerk-Standby-Warnung ausblenden",
                 "fr": "Masquer l'avertissement de veille réseau"

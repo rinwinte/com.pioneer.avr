@@ -1,0 +1,62 @@
+{
+  "id": "set_volume_percentage",
+  "title": {
+    "en": "Set volume",
+    "nl": "Wijzig het volume",
+    "de": "Lautstärke einstellen",
+    "fr": "Régler le volume"
+  },
+  "titleFormatted": {
+    "en": "Switch the [[zone]] input to [[volume]]",
+    "nl": "Stel [[zone]] volume in op [[volume]]",
+    "de": "[[zone]] Lautstärke stellen zum [[volume]]",
+    "fr": "Réglez le volume de [[zone]] sur [[volume]]"
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=receiver"    
+    },
+    {
+      "name": "zone",
+      "type": "dropdown",
+      "values": [
+        {
+          "id": "main",
+          "title": {
+            "en": "main",
+            "nl": "hoofdzone",
+            "de": "Hauptzone",
+            "fr": "zone principale"
+          }
+        },
+        {
+          "id": "zone2",
+          "title": {
+            "en": "zone 2",
+            "nl": "zone 2",
+            "de": "zone 2",
+            "fr": "zone 2"
+          }
+        }
+      ]
+    },
+    {
+      "name": "volume",
+      "type": "range",
+      "title": {
+        "en": "volume",
+        "nl": "volume",
+        "de": "Volumen",
+        "fr": "volume"
+      },
+      "min": 0,
+      "max": 1,
+      "step": 0.01,
+      "label": "%",
+      "labelMultiplier": 100,
+      "labelDecimals": 2
+    }
+  ]
+}

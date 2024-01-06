@@ -48,6 +48,12 @@ class PioneerVSXDriver extends Homey.Driver {
         return Promise.resolve(inputSourceMatched && zoneMatched);
       });
 
+    this._volumeChangedTrigger = this.homey.flow.getDeviceTriggerCard('volume_changed')
+      .registerRunListener(async (args, state) => {
+        this.driverLog(`FlowCardTrigger - ${args.zone} volume_changed`);
+        return Promise.resolve(state.zone === args.zone);
+      });
+
     this.homey.flow
       .getConditionCard('on')
       .registerRunListener(async (args, state) => {
@@ -137,6 +143,27 @@ class PioneerVSXDriver extends Homey.Driver {
         this.driverLog('FlowCardAction - set_screen_brightness: ', args.brightness);
         return args.device.SetScreenBrightness(args.brightness);
       });
+
+    this.homey.flow
+      .getActionCard('set_volume_percentage')
+      .registerRunListener(async (args, state) => {
+        this.driverLog(`FlowCardAction - ${args.zone} set_volume_percentage: ${args.volume}`);
+        return args.device.onCapabilityVolumeSet(args.zone, args.volume);
+      });
+
+    this.homey.flow
+      .getActionCard('unmute')
+      .registerRunListener(async (args, state) => {
+        this.driverLog(`FlowCardAction - ${args.zone} unmute`);
+        return args.device.onCapabilityVolumeMute(args.zone, false);
+      });
+
+    this.homey.flow
+      .getActionCard('mute')
+      .registerRunListener(async (args, state) => {
+        this.driverLog(`FlowCardAction - ${args.zone} mute`);
+        return args.device.onCapabilityVolumeMute(args.zone, true);
+      });
   }
 
   onDeleted() {
@@ -163,6 +190,14 @@ class PioneerVSXDriver extends Homey.Driver {
     const state = { zone, source };
 
     this._inputSourceChangedTrigger.trigger(device, tokens, state)
+      .catch(this.error);
+  }
+
+  async triggerVolumeChangedFlow(device, zone) {
+    const tokens = {};
+    const state = { zone };
+
+    this._volumeChangedTrigger.trigger(device, tokens, state)
       .catch(this.error);
   }
 

@@ -43,5 +43,11 @@
   },
   "1.0.2": {
     "en": "Patch for sentry logging"
+  },
+  "1.0.3": {
+    "en": "Temporarily patch for source input 44 not found. Extra logging to tackly zone2 capability errors."
+  },
+  "1.0.4": {
+    "en": "Added flow cards for volume/mute control"
   }
 }

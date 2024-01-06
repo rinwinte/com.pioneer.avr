@@ -31,14 +31,11 @@ Condition Flow Cards:
 
 Action Flow Cards:
 * Set volume to
-* Set relative volume to
 * Put device on
 * Put device off
 * Set device on/off
-* Decrease the volume by one step
 * Mute the device
 * Unmute the device
-* Increase the volume by one step
 * Previous track (In internet/H.M.G. source only)
 * Next track (In internet/H.M.G. source only)
 * Play track (In internet/H.M.G. source only)
@@ -99,6 +96,8 @@ A static IP is required to prevent the Pioneer receiver from getting a new IP ad
 ## Future updates
 These features could be added:
 
+* Track information is currently not activated
+* Internet Radio / HMG control is currently not activated
 * Full zone 2 & 3 control
 * Cursor remote
 * Tone control; Bass & Trebble
@@ -145,6 +144,7 @@ These features could be added:
 ## Version 1.0.3
 * Temporarily patch for source input 44 not found. Extra logging to tackly zone2 capability errors.
 
-
+## Version 1.0.4
+* Added flow cards for volume/mute control
 
 

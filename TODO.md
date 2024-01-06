@@ -90,7 +90,7 @@ HOW TO DEPLOY NEW FIRMWARE:
 	6. run command: homey app publish
 		-> Choose Yes for updating version number
 		-> Choose witch version number to increase, must be the same as in package.json
-		-> Enter a changelog test
+		-> Enter a changelog text
 		-> Choose Yes
 	7. run command to add all files to the repository: git add --all
 	8. run command to view which files are added: git status

@@ -1,26 +1,16 @@
 {
-  "id": "on",
+  "id": "mute",
   "title": {
-    "en": "Turn on",
-    "nl": "Zet aan",
-    "de": "Einschalten",
-    "fr": "Activer",
-    "it": "Attiva",
-    "sv": "Aktivera",
-    "no": "Slå på",
-    "es": "Encender",
-    "da": "Tændt"  
+    "en": "Mute",
+    "nl": "Demp het geluid",
+    "de": "Stummschalten",
+    "fr": "Son muet" 
   },
   "titleFormatted": {
-    "en": "Turn [[zone]] on ",
-    "nl": "Zet [[zone]] aan",
-    "de": "[[zone]] Einschalten",
-    "fr": "Activer [[zone]]",
-    "it": "Attiva [[zone]]",
-    "sv": "Aktivera [[zone]]",
-    "no": "Slå [[zone]] på",
-    "es": "Encender [[zone]]",
-    "da": "Tændt [[zone]]"  
+    "en": "Mute [[zone]]",
+    "nl": "Demp het geluid van [[zone]]",
+    "de": "[[zone]] stumschalten",
+    "fr": "Désactiver le son de la [[zone]]" 
   },
   "args": [
     {

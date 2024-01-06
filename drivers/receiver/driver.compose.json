@@ -166,7 +166,7 @@
           "type": "checkbox",
           "value": false,
           "label": {
-            "en": "Hide network standby wanring",
+            "en": "Hide network standby warning",
             "nl": "Verberg network standby waarschuwing",
             "de": "Netzwerk-Standby-Warnung ausblenden",
             "fr": "Masquer l'avertissement de veille réseau"
