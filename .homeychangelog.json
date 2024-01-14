@@ -49,5 +49,8 @@
   },
   "1.0.4": {
     "en": "Added flow cards for volume/mute control"
+  },
+  "1.0.5": {
+    "en": "Added range setting for volume required for some devices with a different volume range"
   }
 }

@@ -86,6 +86,7 @@ HOW TO DEPLOY NEW FIRMWARE:
 	2. //run command: sudo npm i -g eslint
 	3. //run command: sudo npm build
 	4. //run command: sudo npm install -g homey
+	4. run command: nvm use 16
 	5. run command: homey app validate --level publish
 	6. run command: homey app publish
 		-> Choose Yes for updating version number
@@ -98,4 +99,9 @@ HOW TO DEPLOY NEW FIRMWARE:
 	10. run command: git push https://github.com/rinwinte/com.pioneer.avr.git
 		-> Add username: rinwinte
 		-> Add password: see token on account
+			-> github.com
+			-> settings -> Developer settings -> Personal access tokens -> 
+                           Tokens (classic) -> Generate new token
+                        -> enter a name, expiration date (7 days) and select all boxes
+
 

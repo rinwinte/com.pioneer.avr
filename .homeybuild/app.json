@@ -1,7 +1,7 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "com.pioneer.avr",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "brandColor": "#A90533",
@@ -1554,7 +1554,7 @@
           "fr": "Régler le volume"
         },
         "titleFormatted": {
-          "en": "Switch the [[zone]] input to [[volume]]",
+          "en": "Set the [[zone]] volume to [[volume]]",
           "nl": "Stel [[zone]] volume in op [[volume]]",
           "de": "[[zone]] Lautstärke stellen zum [[volume]]",
           "fr": "Réglez le volume de [[zone]] sur [[volume]]"
@@ -1783,6 +1783,36 @@
               "attr": {
                 "min": 1,
                 "max": 65535
+              }
+            },
+            {
+              "id": "minRangeVolume",
+              "type": "number",
+              "label": {
+                "en": "Minimum value of volume range",
+                "nl": "Minimale volume range waarde",
+                "de": "Minimalwert des Volumenbereichs",
+                "fr": "Valeur minimale de la plage de volume"
+              },
+              "value": 0,
+              "attr": {
+                "min": 1,
+                "max": 20
+              }
+            },
+            {
+              "id": "maxRangeVolume",
+              "type": "number",
+              "label": {
+                "en": "Maximum value of volume range",
+                "nl": "Maximale volume range waarde",
+                "de": "Maximaler Wert des Lautstärkebereichs",
+                "fr": "Valeur maximale de la plage de volume"
+              },
+              "value": 185,
+              "attr": {
+                "min": 1,
+                "max": 185
               }
             }
           ]

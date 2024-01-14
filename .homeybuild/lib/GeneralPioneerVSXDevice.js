@@ -468,8 +468,8 @@ class GeneralPioneerVSXDevice extends Homey.Device {
 
   async onVolumeInfo(zone, volume) {
     const volumeInt = parseInt(volume, 10);
-    const volMin = Commands.Volume[zone].VolumeMin;
-    const volMax = Commands.Volume[zone].VolumeMax;
+    const volMin = this.getSetting('minRangeVolume');
+    const volMax = this.getSetting('maxRangeVolume');
     const percentage = Math.round(volumeInt.map(volMin, volMax, 0, 1) * 100) / 100;
 
     this.deviceLog(`onVolumeInfo() ${zone} - percentage: ${percentage * 100}%`);
@@ -485,19 +485,18 @@ class GeneralPioneerVSXDevice extends Homey.Device {
 
     // This volume up and volume down commands are required for devices
     // that do not support the Volume Level (VL) command.
-    if (this._volumeState.triggered[zone] === true) {
-      const volSPScaled = Math.round(this._volumeState.setpoint[zone].map(0, 1, volMin, volMax));
-
-      if (volSPScaled > volumeInt) {
+    if (this._volumeState.triggered[zone] === true){
+      if (this._volumeState.setpoint[zone] > percentage) {
         await this.sendCommand(Commands.Volume[zone].VolumeUp);
-      } else if (volSPScaled < volumeInt) {
-        await this.sendCommand(Commands.Volume[zone].VolumeDown);
+      } else if (this._volumeState.setpoint[zone] < percentage) {
+          await this.sendCommand(Commands.Volume[zone].VolumeDown);
       } else {
-        this._volumeState.triggered[zone] = false;
-      }
-    } else {
-      this.deviceLog('onVolumeInfo() - volume_set');
+          this._volumeState.triggered[zone] = false;
+      } 
+    }
 
+    if (this._volumeState.triggered[zone] === false) {
+      this.deviceLog('onVolumeInfo() - volume_set');
       this.setCapabilityValue(`volume_set.${zone}`, percentage)
         .then(() => {
           this._volumeState.upLock[zone] = false;
@@ -710,8 +709,8 @@ class GeneralPioneerVSXDevice extends Homey.Device {
       this._volumeState.setpoint[zone] = value;
     }
 
-    const volMin = Commands.Volume[zone].VolumeMin;
-    const volMax = Commands.Volume[zone].VolumeMax;
+    const volMin = this.getSetting('minRangeVolume');
+    const volMax = this.getSetting('maxRangeVolume');
     const val = Math.round(this._volumeState.setpoint[zone].map(0, 1, volMin, volMax));
 
     let level = val.toString();
@@ -751,7 +750,7 @@ class GeneralPioneerVSXDevice extends Homey.Device {
       return Promise.resolve();
     }
 
-    const currentVolume = this.getCapabilityValue('volume_set');
+    const currentVolume = this.getCapabilityValue(`volume_set.${zone}`);
     // Pressed Volume UP to fast
     if (this._volumeState.upLock[zone] === true) {
       return Promise.resolve();

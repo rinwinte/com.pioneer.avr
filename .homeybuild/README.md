@@ -147,4 +147,7 @@ These features could be added:
 ## Version 1.0.4
 * Added flow cards for volume/mute control
 
+## Version 1.0.5
+* Added range setting for volume required for some devices with a different volume range
+ 
 
